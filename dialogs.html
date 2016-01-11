@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+<title>Dialogs</title>
+<!-- CSS  -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<style></style>
+</head>
+<body>
+<header>
+  <nav class="top-nav blue-grey darken-4">
+    <div class="container">
+      <div class="nav-wrapper"> <a href="index.html" class="page-title light">Components</a> </div>
+    </div>
+  </nav>
+  <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="mdi-navigation-menu"></i></a></div>
+  <ul id="nav-mobile" class="side-nav fixed">
+    <li class="logo"><a id="logo-container" href="index.html" class="brand-logo"> <img id="logo-img" src="images/q2logo.png" height="50"></img> </a></li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Components</a>
+          <div class="collapsible-body">
+            <ul>
+                            <li><a href="buttons.html">Buttons-Ecomm</a></li>
+              <li><a href="buttons-central.html">Buttons-Central</a></li>
+              <li><a href="fab.html">Buttons: Floating Action</a></li>
+              <li><a href="cards.html">Cards</a></li><li><a href="calendar.html">Date and time picker</a></li>
+              <li><a href="dialogs.html">Dialogs</a></li>
+              <li><a href="dividers.html">Dividers</a></li>
+              <li><a href="dropdowns.html">Dropdowns</a></li>
+              <li><a href="graphs.html">Graphs</a></li>
+              <li><a href="progress.html">Progress indicators</a></li>
+              <li><a href="side-menus.html">Side menus</a></li>
+              <li><a href="tabs.html">Tabs</a></li>
+              <li><a href="tables.html">Tables</a></li>
+              <li><a href="tags.html">Tags</a></li>
+              <li><a href="text-fields.html">Text Fields</a></li>
+              <li><a href="toggles.html">Toggles</a></li>
+              <li><a href="tool-tips.html">Tool tips</a> </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Styles</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="colors.html">Colors</a></li>
+              <li><a href="icons.html">Icons</a></li>
+              <li><a href="typography.html">Typography</a> </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Patterns</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="errors.html">Errors</a></li>
+              <li><a href="empty-states.html">Empty states</a></li>
+              <li><a href="filters.html">Filters</a></li>
+              <li><a href="launch-screens.html">Launch screens</a></li>
+              <li><a href="navigation.html">Navigation</a></li>
+              <li><a href="search.html">Search</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="bold"><a href="layout.html" class="waves-effect waves-teal">Layout</a> </li>
+    <li class="bold"><a href="accessibility.html" class="waves-effect waves-teal">Accessibility</a> </li>
+    <li class="bold"><a href="animation.html" class="waves-effect waves-teal">Animation</a> </li>
+  </ul>
+</header>
+<main>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container"> <br>
+      <br>
+      <h1 class="header black-text styleguide center">Dialogs</h1>
+    </div>
+  </div>
+  <div class="container"> 
+    
+    <!--behavior section-->
+    <div class="section">
+      <h2>Behavior</h2>
+      <div class="row">
+        <div class="col s12 m6">
+          <h3>Scrolling</h3>
+          <p>Avoid scrolling content in a dialog where possible.  If the dialog does require scrolling, the footer actions  always remain visible.  If the scrolling dialog contains a list of options, the title also remains visible at all times so that it can be viewed in conjunction with the options.  Otherwise, the title scrolls up with the content.</p>
+        </div>
+        <div class="col s12 m6">
+          <h3>Dismissing</h3>
+          <p>Dialogs can be dismissed by touching/clicking outside of the dialog or by using the system back button (Android).  Clicking outside of the dialog is equivalent to choosing the negative or conservative action (ex. Cancel). </p>
+        </div>
+      </div>
+      <br>
+    </div>
+    <!--behavior section--> 
+    
+    <!--alerts section-->
+    <div class="section">
+      <h2>Alerts</h2>
+      <div class="row">
+        <div class="col s12 m6">
+          <h3>No title bars</h3>
+          <div class="gray-block dialogs center no-padding"><img src="images/alert-1.png"/></div>
+          <br>
+          <!-- Modal Trigger --><a class="waves-effect waves-light btn modal-trigger" href="#modal1">Try it</a> </div>
+        <div class="col s12 m6">
+          <h3>&nbsp;</h3>
+          <p>Alerts are interruptive and prevent users from continuing until they make a decision; therefore, they are only used for urgent situations that require user confirmation.</p>
+          <p>Most alerts don't require a title and can be summed up with a single sentence.  The actions on the alert clearly relate to the question or statement, and clearly describe the outcome of the user's decision.</p>
+          
+          <!-- Modal Structure -->
+          <div id="modal1" class="modal alert">
+            <div class="modal-content">
+              <p>Discard draft?</p>
+            </div>
+            <div class="modal-footer"> <a href="#!" class=" modal-action modal-close waves-effect waves-teal btn-flat">Discard</a><a href="#!" class=" modal-action modal-close waves-effect waves-teal btn-flat">Cancel</a> </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col s12 m6">
+          <h3>With title bars</h3>
+          <div class="gray-block dialogs center no-padding"><img src="images/alert-2.png"/></div>
+          <br>
+          <!-- Modal Trigger --><a class="waves-effect waves-light btn modal-trigger" href="#modal2">Try it</a> </div>
+        <div class="col s12 m6">
+          <h3>&nbsp;</h3>
+          <p>Alerts with title bars are used only in high-risk situations, such as potential loss of data.  Use titles that clearly describe the action, as opposed to vague titles like "Are you sure?" or "Warning".</p>
+          
+          <!-- Modal Structure -->
+          <div id="modal2" class="modal alert title">
+            <div class="modal-content">
+              <h2>Delete this campaign?</h2>
+              <p>Your campaign data will be lost.</p>
+            </div>
+            <div class="modal-footer"> <a href="#!" class="modal-action modal-close waves-effect waves-teal btn-flat">Delete</a><a href="#!" class=" modal-action modal-close waves-effect waves-teal btn-flat">Cancel</a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--alerts section--> 
+    
+    <!--simple dialogs section-->
+    <div class="section">
+      <h2>Simple dialogs</h2>
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="gray-block dialogs center no-padding"><img src="images/simple-dialog.png"/></div>
+          <br>
+          <!-- Modal Trigger --><a class="waves-effect waves-light btn modal-trigger" href="#modal3">Try it</a> </div>
+        <div class="col s12 m6">
+          <p>Simple dialogs provide additional details about a list item or actions related to the primary task. They are to be used sparingly since they are more interruptive than dropdowns.</p>
+          <p>Choosing an option commits the option and closes the dialog, while touching outside the dialog or pressing back cancels the action and closes the dialog.</p>
+          
+          <!-- Modal Structure -->
+          <div id="modal3" class="modal">
+            <div class="modal-content">
+              <h2>Lorem ipsum dolor</h2>
+              <div class="collection"> <a href="#!" class="collection-item modal-close">Lorem ipsum dolor sit amet</a> <a href="#!" class="collection-item modal-close">Consectetur adipiscing elit</a> <a href="#!" class="collection-item modal-close">Sed do eiusmod tempor incididunt ut</a> <a href="#!" class="collection-item modal-close">Labore et dolore magna aliqua</a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--simple dialogs section--> 
+    
+    <!--confirmation dialogs section-->
+    <div class="section">
+      <h2>Confirmation dialogs</h2>
+      <div class="row">
+        <div class="col s12 m6">
+          <h3>Non-scrolling content</h3>
+          <div class="gray-block dialogs center no-padding"><img src="images/confirm-dialog.png"/></div>
+          <br>
+          <!-- Modal Trigger --><a class="waves-effect waves-light btn modal-trigger" href="#modal4">Try it</a> </div>
+        <div class="col s12 m6">
+          <h3>&nbsp;</h3>
+          <p>Confirmation dialogs require users to explicitly confirm their choice before the option is committed. This is only necessary when there is a good reason for the user to pause before confirming; most selections can be made from a dropdown or a simple dialog without requiring the extra confirmation step from the user.</p>
+          
+          <!-- Modal Structure -->
+          <div id="modal4" class="modal">
+            <div class="modal-content">
+              <h2>Lorem ipsum dolor</h2>
+              <div class="collection"> <a href="#!" class="collection-item">
+                <input name="group1" type="checkbox" id="test1" />
+                <label for="test1">Lorem ipsum dolor sit amet</label>
+                </a> <a href="#!" class="collection-item">
+                <input name="group1" type="checkbox" id="test2" />
+                <label for="test2">Consectetur adipiscing elit</label>
+                </a> <a href="#!" class="collection-item">
+                <input name="group1" type="checkbox" id="test3" />
+                <label for="test3">Sed do eiusmod tempor incididunt ut</label>
+                </a></div>
+            </div>
+            <div class="modal-footer"> <a href="#!" class=" modal-action modal-close waves-effect waves-teal btn-flat">Save</a><a href="#!" class=" modal-action modal-close waves-effect waves-teal btn-flat">Cancel</a> </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col s12 m6">
+          <h3>Scrolling content (no options)</h3>
+          <div class="gray-block dialogs center no-padding"><img src="images/scrolling-dialog-no-options.png"/></div>
+          <br>
+          <!-- Modal Trigger --><a class="waves-effect waves-light btn modal-trigger" href="#modal5">Try it</a> </div>
+        <div class="col s12 m6">
+          <h3>&nbsp;</h3>
+          <p>Avoid scrolling content within a dialog wherever possible, and instead explore layouts that are optimal for large amounts of content.</p>
+          <p>If scrolling content cannot be avoided within a confirmation dialog, use the fixed footer so that the actions are visible at all times.</p>
+          <p>If the dialog does not contain options to select from, the header can scroll with the content.</p>
+          
+          <!-- Modal Structure -->
+          <div id="modal5" class="modal modal-fixed-footer">
+            <div class="modal-content">
+              <h2>Lorem ipsum dolor</h2>
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+              <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+              <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+              <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+            </div>
+            <div class="modal-footer"> <a href="#!" class=" modal-action modal-close waves-effect waves-teal btn-flat">Save</a><a href="#!" class=" modal-action modal-close waves-effect waves-teal btn-flat">Cancel</a> </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col s12 m6">
+          <h3>Scrolling content with options</h3>
+          <div class="gray-block dialogs center no-padding"><img src="images/scrolling-dialog-fixed.png"/></div>
+          <br>
+          <!-- Modal Trigger --><a class="waves-effect waves-light btn modal-trigger" href="#modal6">Try it</a> </div>
+        <div class="col s12 m6">
+          <h3>&nbsp;</h3>
+          <p>If a scrolling dialog contains options that can be selected, use a fixed header so that it can be viewed in conjunction with the options.</p>
+          
+          <!-- Modal Structure -->
+          <div id="modal6" class="modal modal-fixed-footer modal-fixed-header">
+            <div class="modal-header">
+              <h2>Lorem ipsum dolor</h2>
+            </div>
+            <div class="modal-content">
+              <div class="collection"> <a href="#!" class="collection-item">
+                <input name="group1" type="checkbox" id="test1" />
+                <label for="test1">Lorem ipsum dolor sit amet</label>
+                </a> <a href="#!" class="collection-item">
+                <input name="group1" type="checkbox" id="test2" />
+                <label for="test2">Consectetur adipiscing elit</label>
+                </a> <a href="#!" class="collection-item">
+                <input name="group1" type="checkbox" id="test3" />
+                <label for="test3">Sed do eiusmod tempor incididunt ut</label>
+                </a> <a href="#!" class="collection-item">
+                <input name="group1" type="checkbox" id="test4" />
+                <label for="test4">Lorem ipsum dolor sit amet</label>
+                </a> <a href="#!" class="collection-item">
+                <input name="group1" type="checkbox" id="test5" />
+                <label for="test5">Consectetur adipiscing elit</label>
+                </a> <a href="#!" class="collection-item">
+                <input name="group1" type="checkbox" id="test6" />
+                <label for="test6">Sed do eiusmod tempor incididunt ut</label>
+                </a> <a href="#!" class="collection-item">
+                <input name="group1" type="checkbox" id="test7" />
+                <label for="test7">Lorem ipsum dolor sit amet</label>
+                </a> <a href="#!" class="collection-item">
+                <input name="group1" type="checkbox" id="test8" />
+                <label for="test8">Consectetur adipiscing elit</label>
+                </a> <a href="#!" class="collection-item">
+                <input name="group1" type="checkbox" id="test9" />
+                <label for="test9">Sed do eiusmod tempor incididunt ut</label>
+                </a> <a href="#!" class="collection-item">
+                <input name="group1" type="checkbox" id="test10" />
+                <label for="test10">Lorem ipsum dolor sit amet</label>
+                </a> <a href="#!" class="collection-item">
+                <input name="group1" type="checkbox" id="test11" />
+                <label for="test11">Consectetur adipiscing elit</label>
+                </a> <a href="#!" class="collection-item">
+                <input name="group1" type="checkbox" id="test12" />
+                <label for="test12">Sed do eiusmod tempor incididunt ut</label>
+                </a></div>
+            </div>
+            <div class="modal-footer"> <a href="#!" class=" modal-action modal-close waves-effect waves-teal btn-flat">Save</a><a href="#!" class=" modal-action modal-close waves-effect waves-teal btn-flat">Cancel</a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--confirmation dialogs section--> 
+    
+    <!--full screen dialogs section-->
+    <div class="section">
+      <h2>Full-screen dialogs</h2>
+      <br>
+      <p>Full-screen offer more real-estate and minimize the appearance of stacked elements, which makes them suitable for complex layouts and workflows.  In contrast to other dialogs, it is acceptable to launch a secondary dialog from within a full-screen dialog.</p>
+      <div class="row">
+        <div class="col s12 m12">
+          <div class="gray-block dialogs no-padding white">
+            <h3>Without tabs</h3>
+            <img src="images/fullscreen-dialog-no-tabs.png"/></div>
+          <br>
+          <!-- Modal Trigger --><a class="waves-effect waves-light btn modal-trigger" href="#modal7">Try it</a> </div>
+        
+        <!-- Modal Structure -->
+        <div id="modal7" class="modal modal-fixed-footer modal-fixed-header fullscreen">
+          <div class="modal-header">
+            <h2>Lorem ipsum dolor</h2>
+          </div>
+          <div class="modal-content">
+            <div class="col s12 m6">
+              <div class="collection"> <a href="#!" class="collection-item">
+                <div class="placeholder"></div>
+                </a> <a href="#!" class="collection-item">
+                <div class="placeholder"></div>
+                </a> <a href="#!" class="collection-item">
+                <div class="placeholder"></div>
+                </a> <a href="#!" class="collection-item">
+                <div class="placeholder"></div>
+                </a> <a href="#!" class="collection-item">
+                <div class="placeholder"></div>
+                </a> </div>
+            </div>
+            <div class="col s12 m6">
+              <div class="collection"> <a href="#!" class="collection-item">
+                <div class="placeholder"></div>
+                </a> <a href="#!" class="collection-item">
+                <div class="placeholder"></div>
+                </a> <a href="#!" class="collection-item">
+                <div class="placeholder"></div>
+                </a> <a href="#!" class="collection-item">
+                <div class="placeholder"></div>
+                </a> <a href="#!" class="collection-item">
+                <div class="placeholder"></div>
+                </a> </div>
+            </div>
+          </div>
+          <div class="modal-footer"> <a href="#!" class=" modal-action modal-close waves-effect waves-teal btn-flat">Save</a><a href="#!" class=" modal-action modal-close waves-effect waves-teal btn-flat">Cancel</a> </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m12">
+          <div class="gray-block dialogs no-padding white"><br>
+            <h3>With tabs</h3>
+            <img src="images/fullscreen-dialog.png"/></div>
+          <br>
+          <!-- Modal Trigger --><a class="waves-effect waves-light btn modal-trigger" href="#modal8">Try it</a> </div>
+        
+        <!-- Modal Structure -->
+        <div id="modal8" class="modal modal-fixed-footer modal-fixed-header modal-tabs fullscreen">
+          <div class="modal-header">
+            <h2>Lorem ipsum dolor</h2>
+            <ul class="tabs">
+              <li class="tab"><a class="active" href="#optiona">Option A</a></li>
+              <li class="tab"><a href="#optionb">Option B</a></li>
+            </ul>
+          </div>
+          <div class="modal-content">
+            <div id="optiona">
+              <div class="col s12 m6">
+                <div class="collection"> <a href="#!" class="collection-item">
+                  <div class="placeholder"></div>
+                  </a> <a href="#!" class="collection-item">
+                  <div class="placeholder"></div>
+                  </a> <a href="#!" class="collection-item">
+                  <div class="placeholder"></div>
+                  </a> <a href="#!" class="collection-item">
+                  <div class="placeholder"></div>
+                  </a> <a href="#!" class="collection-item">
+                  <div class="placeholder"></div>
+                  </a> </div>
+              </div>
+              <div class="col s12 m6">
+                <div class="collection"> <a href="#!" class="collection-item">
+                  <div class="placeholder"></div>
+                  </a> <a href="#!" class="collection-item">
+                  <div class="placeholder"></div>
+                  </a> <a href="#!" class="collection-item">
+                  <div class="placeholder"></div>
+                  </a> <a href="#!" class="collection-item">
+                  <div class="placeholder"></div>
+                  </a> <a href="#!" class="collection-item">
+                  <div class="placeholder"></div>
+                  </a> </div>
+              </div>
+            </div>
+            <div id="optionb">
+              <div class="col s12 m6">
+                <div class="collection"> <a href="#!" class="collection-item">
+                  <div class="placeholder"></div>
+                  </a> <a href="#!" class="collection-item">
+                  <div class="placeholder"></div>
+                  </a> <a href="#!" class="collection-item">
+                  <div class="placeholder"></div>
+                  </a> <a href="#!" class="collection-item">
+                  <div class="placeholder"></div>
+                  </a> <a href="#!" class="collection-item">
+                  <div class="placeholder"></div>
+                  </a> </div>
+              </div>
+              <div class="col s12 m6">
+                <div class="collection"> <a href="#!" class="collection-item">
+                  <div class="placeholder"></div>
+                  </a> <a href="#!" class="collection-item">
+                  <div class="placeholder"></div>
+                  </a> <a href="#!" class="collection-item">
+                  <div class="placeholder"></div>
+                  </a> <a href="#!" class="collection-item">
+                  <div class="placeholder"></div>
+                  </a> <a href="#!" class="collection-item">
+                  <div class="placeholder"></div>
+                  </a> </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer"> <a href="#!" class=" modal-action modal-close waves-effect waves-teal btn-flat">Save</a><a href="#!" class=" modal-action modal-close waves-effect waves-teal btn-flat">Cancel</a> </div>
+        </div>
+      </div>
+    </div>
+    <!--end full screen dialogs section--> 
+    
+    <!--layout section-->
+    <div class="section">
+      <h2>Layout & Content Guidelines</h2>
+      <div class="row">
+        <div class="col s12 m6">
+          <h3>Do:</h3>
+          <ul class="bullets">
+            <li>Use inline expansion (ex. "advanced options") to disclose additional content within a dialog.</li>
+            <li>Use fixed footers for confirmation dialogs with scrolling content.</li>
+            <li>Use full-screen modals for complex functionality on mobile phones.</li>
+            <li>Use questions and actions indicative of their results, such as "Discard draft?" and "Save."</li>
+            <li>Use dropdowns instead of simple dialogs where possible, as they are less disruptive.</li>
+            <li>Stack buttons when they exceed the maximum width, with the affirmative action above and the dismissive action below.</li>
+          </ul>
+        </div>
+        <div class="col s12 m6">
+          <h3>Don't:</h3>
+          <ul class="bullets">
+            <li>Open dialogs from within dialogs.  The exception is full-screen dialogs, which can open other dialogs without adding unnecessary visual complexity.</li>
+            <li>Allow scrolling content within dialogs unless other layout options are not feasible.</li>
+            <li>Over-use alert titles.  They are only necessary for high-risk situations.</li>
+            <li>Use ambiguous content such as "Warning!" or "OK."</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--end layout section-->
+    
+    <div class="section no-divider">
+      <h2>Acceptance Criteria</h2>
+      <div class="row">
+        <div class="col s12 m12">
+          <h3>User testing:</h3>
+          <ol>
+            <li>Users can easily close dialogs.</li>
+            <li>The labels on the action buttons help users clearly understand the results of the actions.</li>
+          </ol>
+          <h3>Accessibility testing:</h3>
+          <ol>
+            <li>The focus is on the dialog when the dialog is open.</li>
+            <li>Users can tab through all the controls in the dialog.</li>
+            
+          </ol>
+          <h3>Tech testing:</h3>
+          <ol>
+            <li>Fixed footers are used in confirmation dialogs with scrolling content.</li>
+            <li>Buttons that exceed the width of the dialog are stacked, with the affirmative action above and the negative dismissive action below.</li>
+            <li>No secondary dialogs open from the main dialog, unless the main dialog is full-screen.</li>
+         
+          </ol>
+        </div>
+        <div class="col s6 m6"> </div>
+      </div>
+    </div>
+    
+    <!--end acceptance criteria--> 
+  </div>
+  </div>
+  </div>
+  </div>
+  <br>
+  <br>
+  <div class="section"> </div>
+  </div>
+</main>
+<footer class="page-footer teal">
+  <div class="footer-copyright">
+    <div class="container"> Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a> </div>
+  </div>
+</footer>
+
+<!--  Scripts--> 
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> 
+<script src="js/materialize.js"></script> 
+<script src="js/init.js"></script> 
+<script>
+  $(document).ready(function(){
+    $('ul.tabs').tabs('select_tab', 'tab_id');
+  });
+</script> 
+<script>
+   $(document).ready(function(){
+    $('.modal-trigger').leanModal();
+  });
+</script> 
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('select').material_select();
+  });
+</script>
+</body>
+</html>

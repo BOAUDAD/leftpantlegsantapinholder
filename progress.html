@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+<title>Progress</title>
+<!-- CSS  -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<style>
+/* Matt's Progress Loader Style*/
+/*Note that the main difference from the original is a slightly slower animation and cubic function. Looks less awkward than a short linear transition.*/
+
+.progress{
+	background-color: #f8bbd0 !important;
+}
+
+.progress .determinate {
+    position: absolute;
+    background-color: inherit;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #880e4f !important;
+    -webkit-transition: width .4s ease-in-out !important; 
+    -moz-transition: width .4s ease-in-out !important; 
+    -o-transition: width .4s ease-in-out !important; 
+    -ms-transition: width .4s ease-in-out !important;
+    transition: width .4s ease-in-out !important; 
+	}
+	
+.progress .indeterminate{
+	background-color: #880e4f !important;
+}
+
+
+/* This is a new, smaller spinner style to accomodate button-sized text. */
+.preloader-wrapper.x-small {
+    width: 13px;
+    height: 13px; 
+	margin-right: 13px;
+}
+
+.spinner-gray, .spinner-gray-only {
+  border-color: #9F9F9F; 
+ }
+
+.active .spinner-layer.spinner-blue-only, .active .spinner-layer.spinner-red-only, .active .spinner-layer.spinner-yellow-only, .active .spinner-layer.spinner-green-only,  .active .spinner-layer.spinner-gray-only{
+  /* durations: 4 * ARCTIME */
+  opacity: 1;
+  -webkit-animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
+  animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both; 
+  }
+  
+  
+ @-webkit-keyframes gray-fade-in-out {
+  from {
+    opacity: 0; }
+
+  40% {
+    opacity: 0; }
+
+  50% {
+    opacity: 1; }
+
+  75% {
+    opacity: 1; }
+
+  76% {
+    opacity: 0; } 
+	
+}
+
+
+@keyframes gray-fade-in-out {
+  from {
+    opacity: 0; }
+
+  40% {
+    opacity: 0; }
+
+  50% {
+    opacity: 1; }
+
+  75% {
+    opacity: 1; }
+
+  76% {
+    opacity: 0; } 
+	
+}
+
+
+.action-preload{
+	opacity: 0.0;
+	display: none;
+}
+
+</style>
+
+
+</head>
+<body>
+<header>
+  <nav class="top-nav blue-grey darken-4">
+    <div class="container">
+      <div class="nav-wrapper"> <a href="index.html" class="page-title light">Components</a> </div>
+    </div>
+  </nav>
+  <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="mdi-navigation-menu"></i></a></div>
+  <ul id="nav-mobile" class="side-nav fixed">
+    <li class="logo"><a id="logo-container" href="index.html" class="brand-logo"> <img id="logo-img" src="images/q2logo.png" height="50"></img> </a></li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Components</a>
+          <div class="collapsible-body">
+             <ul>
+              <li><a href="buttons.html">Buttons-Ecomm</a></li>
+              <li><a href="buttons-central.html">Buttons-Central</a></li>
+              <li><a href="fab.html">Buttons: Floating Action</a></li>
+              <li><a href="cards.html">Cards</a></li><li><a href="calendar.html">Date and time picker</a></li>
+              <li><a href="dialogs.html">Dialogs</a></li>
+              <li><a href="dividers.html">Dividers</a></li>
+              <li><a href="dropdowns.html">Dropdowns</a></li>
+              <li><a href="graphs.html">Graphs</a></li>
+              <li><a href="progress.html">Progress indicators</a></li>
+              <li><a href="side-menus.html">Side menus</a></li>
+              <li><a href="tabs.html">Tabs</a></li>
+              <li><a href="tables.html">Tables</a></li>
+              <li><a href="tags.html">Tags</a></li>
+              <li><a href="text-fields.html">Text Fields</a></li>
+              <li><a href="toggles.html">Toggles</a></li>
+              <li><a href="tool-tips.html">Tool tips</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</li>
+<li class="no-padding">
+    <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Styles</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="colors.html">Colors-Ecomm</a></li>
+              <li><a href="colors-central.html">Colors-Central</a></li>
+              <li><a href="icons.html">Icons</a></li>
+                 <li><a href="typography.html">Typography</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</li>
+<li class="no-padding">
+    <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Patterns</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="errors.html">Errors</a></li>
+              <li><a href="empty-states.html">Empty states</a></li>
+              <li><a href="filters.html">Filters</a></li>
+              <li><a href="launch-screens.html">Launch screens</a></li>
+              <li><a href="navigation.html">Navigation</a></li>
+              <li><a href="search.html">Search</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="bold"><a href="layout.html" class="waves-effect waves-teal">Layout</a> </li>
+    <li class="bold"><a href="accessibility.html" class="waves-effect waves-teal">Accessibility</a> </li>
+    <li class="bold"><a href="animation.html" class="waves-effect waves-teal">Animation</a> </li>
+  </ul>
+</header>
+<main>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container"> <br>
+      <br>
+      <h1 class="header black-text styleguide center">Progress Indicators</h1>
+    </div>
+  </div>
+  <div class="container"> 
+    <!--styles and states section-->
+    <div class="section">
+      <h2>Styles</h2>
+      <div class="row">
+        <div class="col s12 m6">
+          <h3>When to use</h3>
+          <p class="grey-text text-darken-1">Progress bars are used when content isn't completely loaded, and the interface may or may not know when it will finish loading. These styles for these are the determinate and indeterminate styles, respectively.</p>
+          <p class="grey-text text-darken-1">Accent colors should be used to avoid confusion with more interacive elements. When practical, progress indicators should be placed only in main content areas (such as containers of cards), or on any light backgrounds where textual or graphic content will appear. </p>
+        </div>
+        <div class="col s12 m6">
+          <h3>Determinate</h3>
+          <p class="grey-text text-darken-1">When the total number of items or time is known, use this style.</p>
+          <div class="progress">
+                <div class="determinate" style="width: 90%"></div>
+          </div>
+          
+          <h3>Indeterminate</h3>
+          <p class="grey-text text-darken-1">When the total number of items or time is not known, use this style:</p>
+          <div class="progress">
+                <div class="indeterminate" style="width: 90%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end styles and states section--> 
+    
+    <!--layout section-->
+    <div class="section no-divider">
+      <h2>Layout</h2>
+      <div class="row">
+          <div class="div col s8 offset-s2">
+            <!-- Progress bar heer-->
+          </div>
+        </div>
+      <div class="row">
+        <div class="col s6 m6">
+            <div class="card activity">
+                <div class=card-content>
+                    <span class="card-title">Loading stuff...</span>
+                    <p>This may take a moment.</p>
+                    <br />
+                    <div class="progress">
+                        <div class="indeterminate" style="width: "></div>
+                    </div>
+                </div>
+            </div>
+            <h3>Container placement</h3>
+          <p class="grey-text text-darken-1">Also, loaders should be placed at the smallest container <b>above the items to be loaded whenever possible.</b> For instance, if a group of accounts or cards hasn't loaded yet, the container in which they reside should have a loader.</p>
+        </div>
+        <div class="col s6 m6">
+          <h3>Explanatory content</h3>
+          <p class="grey-text text-darken-1">Use phrasing that is generic, but still relevant to the items being loaded inside of the container's title. Optionally, add detail to explain how much time is expected, or any next steps the user should take if the items fail to load in the normal text area.</p>
+          <h3>Loader width</h3>
+          <p class="grey-text text-darken-1">Loaders shouldn't occupy any more space than <b>6 columns or the default width of the content within a contianer</b>, whichever is smaller. It should obey the same padding rules as any text, graphs, or static images. </p>
+        </div>
+      </div>
+    </div>
+    <!--end layout section--> 
+    
+     <div class="section no-divider">
+      <h2>User actions</h2>
+      <div class="row">
+          <div class="div col s8 offset-s2">
+            <!-- Progress bar heer-->
+          </div>
+        </div>
+      <div class="row">
+        <div class="col s6 m6">
+        <div class="card activity">
+        	<div class=card-content>
+            <span class="card-title">A card</span>
+            <p>With an action in it.</p>
+            <br />
+            <a class="waves-effect waves-light btn tooltipped right" id="slow_cta" data-position="bottom" data-delay="50" data-tooltip="Could take a second" onClick="actionLoadDemo();" style="margin-bottom: 10px;">
+            <div class="preloader-wrapper x-small active left action-preload">
+              <div class="spinner-layer spinner-gray-only">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div><div class="gap-patch">
+                  <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+            </div>Click this</a>
+            <br/>
+            </div>
+        </div>
+        </div>
+        <div class="col s6 m6">
+          <h3>Confirming actions</h3>
+          <p class="grey-text text-darken-1">Use a circular preloader inside a button when an action will cause a page load or other network call. This lets the user know that their action is being considered until the results of the action can be shown.</p>
+        </div>
+
+      </div>
+    </div>
+    
+    
+  </div>
+  </div>
+  </div>
+  </div>
+  <br>
+  <br>
+  <div class="section"> </div>
+  </div>
+</main>
+<footer class="page-footer teal">
+  <div class="footer-copyright">
+    <div class="container"> Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a> </div>
+  </div>
+</footer>
+
+<!--  Scripts--> 
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> 
+<script src="js/materialize.js"></script> 
+<script src="js/init.js"></script>
+<script>
+$(document).ready(function(e) {
+	
+	actionLoadDemo = function(){
+		$("#slow_cta").toggleClass("disabled");
+		$(".action-preload").css({"display": "block"}).velocity({opacity: 1.0}, {duration: 1000, queue: false, ease: "easeInOutCubic"});
+		
+		setTimeout(function(){
+			$("#slow_cta").toggleClass("disabled");
+			$(".action-preload").velocity({opacity: 1.0}, {duration: 1000, queue: false, ease: "easeInOutCubic"}).css({"display": "none"});
+			}, 3000);
+	};
+	
+	var changeProgress = function(){
+		
+		//Just a random progress amount to show what different values look like
+		$(".determinate").first().attr("style", "width: ".concat(Math.random()*100).concat("%"));
+								
+	}
+	
+	window.setInterval(changeProgress, 2000);
+	
+});
+
+</script>
+</body>
+</html>

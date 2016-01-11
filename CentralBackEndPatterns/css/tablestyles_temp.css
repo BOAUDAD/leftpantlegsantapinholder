@@ -1,0 +1,7 @@
+.pagination li:hover {
+    background-color: rgba(51, 195, 199, 0.5);
+    -webkit-transition: color .3s ease;
+    -moz-transition: color .3s ease;
+    -o-transition: color .3s ease;
+    -ms-transition: color .3s ease;
+    transition: color .3s ease; }

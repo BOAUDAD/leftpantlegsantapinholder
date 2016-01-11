@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+<title>Tags</title>
+<!-- CSS  -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<link href="css/fontello.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<style>
+/**
+ * These are styles for tags. Visually, they're simialr to the the search badges.
+ *
+ */
+ 
+span.tag {
+  min-width: 3rem;
+  padding: 0 6px;
+  text-align: center;
+  font-size: 1rem;
+  line-height: inherit;
+  color: #757575;
+  position: absolute;
+  right: 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+span.tag.federated {
+    font-weight: 300;
+	position: inherit;
+    font-size: 1.0rem;
+    color: #fff;
+    background-color: #00695c;
+    border-radius: 2px; 
+	padding: 10px 10px;
+	display: inline-block;
+	margin-left: 5px;
+	margin-bottom: 5px;
+}
+
+span.tag.removable i{
+	color: inherit; 
+	font-size: inherit;
+}
+
+span.tag.removable i::hover{
+	font-weight:bold;
+}
+</style>
+</head>
+<body>
+<header>
+  <nav class="top-nav blue-grey darken-4">
+    <div class="container">
+      <div class="nav-wrapper"> <a href="index.html" class="page-title light">Components</a> </div>
+    </div>
+  </nav>
+  <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="mdi-navigation-menu"></i></a></div>
+  <ul id="nav-mobile" class="side-nav fixed">
+    <li class="logo"><a id="logo-container" href="index.html" class="brand-logo"> <img id="logo-img" src="images/q2logo.png" height="50"></img> </a></li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Components</a>
+          <div class="collapsible-body">
+             <ul>
+              <li><a href="buttons.html">Buttons-Ecomm</a></li>
+              <li><a href="buttons-central.html">Buttons-Central</a></li>
+              <li><a href="fab.html">Buttons: Floating Action</a></li>
+              <li><a href="cards.html">Cards</a></li><li><a href="calendar.html">Date and time picker</a></li>
+              <li><a href="dialogs.html">Dialogs</a></li>
+              <li><a href="dividers.html">Dividers</a></li>
+              <li><a href="dropdowns.html">Dropdowns</a></li>
+              <li><a href="graphs.html">Graphs</a></li>
+              <li><a href="progress.html">Progress indicators</a></li>
+              <li><a href="side-menus.html">Side menus</a></li>
+              <li><a href="tabs.html">Tabs</a></li>
+              <li><a href="tables.html">Tables</a></li>
+              <li><a href="tags.html">Tags</a></li>
+              <li><a href="text-fields.html">Text Fields</a></li>
+              <li><a href="toggles.html">Toggles</a></li>
+              <li><a href="tool-tips.html">Tool tips</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</li>
+<li class="no-padding">
+    <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Styles</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="colors.html">Colors-Ecomm</a></li>
+              <li><a href="colors-central.html">Colors-Central</a></li>
+              <li><a href="icons.html">Icons</a></li>
+                 <li><a href="typography.html">Typography</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</li>
+<li class="no-padding">
+    <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Patterns</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="errors.html">Errors</a></li>
+              <li><a href="empty-states.html">Empty states</a></li>
+              <li><a href="filters.html">Filters</a></li>
+              <li><a href="launch-screens.html">Launch screens</a></li>
+              <li><a href="navigation.html">Navigation</a></li>
+              <li><a href="search.html">Search</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>    <li class="bold"><a href="layout.html" class="waves-effect waves-teal">Layout</a> </li>
+    <li class="bold"><a href="accessibility.html" class="waves-effect waves-teal">Accessibility</a> </li>
+    <li class="bold"><a href="animation.html" class="waves-effect waves-teal">Animation</a> </li>
+  </ul>
+</header>
+<main>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container"> <br>
+      <br>
+      <h1 class="header black-text styleguide center">Tags</h1>
+    </div>
+  </div>
+  <div class="container"> 
+    <!--styles and states section-->
+    <div class="section">
+      <h2>Styles</h2>
+      <div class="row">
+        <div class="col s12 m6">
+          <h3>Tag examples</h3>
+          <p class="grey-text text-darken-1">Read-only tags</p>
+          <span class="tag federated">Simony</span><span class="tag federated">Anchovies</span><span class="tag federated">Barbs</span><span class="tag federated">Zach Galifinakis</span><span class="tag federated">Beemer Benz Bentley</span><span class="tag federated">Crocheting</span><span class="tag federated">Scrapbooking</span><span class="tag federated">Erstwhile Antiphon</span><span class="tag federated tooltipped" data-position="bottom" data-delay="50" data-tooltip="Somdet Phra Poramenthra Maha">Somdet Phra Poramenthra Ma...</span>
+          
+        <p class="grey-text text-darken-1">Removable tags (TODO: ADD TEXT ENTRY RULES)</p>
+        <span class="tag federated removable">Suggestive Flatware <i aria-hidden="true" class="icon-close icon-s"></i></span><span class="tag federated removable">Predilections <i aria-hidden="true" class="icon-close icon-s"></i></span><span class="tag federated removable">Nitrites <i aria-hidden="true" class="icon-close icon-s"></i></span><span class="tag federated removable">Outlandishness <i aria-hidden="true" class="icon-close icon-s"></i></span>
+          
+        </div>
+        <div class="col s12 m6">
+          <h3>Tag usage</h3>
+          <p class="grey-text text-darken-1">Tags will usually exist inside text fields, where they can be added or deleted. Deletion can be caused by the user clicking the actionable portion of the tag, or by pressing a "backspace" equivalent while focused on the text field.</p> 
+          <p>In the event that the tags are displayed in a read-only area (such as a table row), there will be no call-to action that specifically promises to let the user edit them. Instead, any nearby edit CTAs must reflect the entity that the tags are associated with, and not the tags themselves. </p>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <h3>Tag styling</h3>
+                <p class="grey-text text-darken-1">
+                    Tags offer a different set of interactions than primary or secondary CTAs, so their coloring and size should reflect that difference. 
+                </p>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!--end styles and states section--> 
+    <!--dev notes section-->
+    <div class="section">
+        <h2>Dev notes</h2>
+          <div class="row">
+              <div class="col s12 m12">
+              For removable tags, functionality should be similar to what's shown in this <a href="http://xoxco.com/projects/code/tagsinput/example.html"><b>jQuery plugin demo.</b></a>
+              </div>
+          </div>
+    </div>
+    <!--dev notes section--> 
+    <!--testing section-->
+    <div class="section">
+      <h2>Acceptance Criteria</h2>
+      <div class="row">
+      <div class="col s12 m12">
+      <p>
+      <h3>User testing:</h3>
+      	<ol>
+        	<li>Tags used according to categorization/tagging needs of the product.</li>
+            <li>Context of the page makes clear that the tag vocabulary is open or closed.</li>
+            <li>Users understand if the tag allows them to search for </li>
+        </ol>
+      </p>
+      <p>
+      <h3>Tech testing:</h3>
+      	<ol>
+
+            <li>Read-only tags cannot be removed by the user (on the page where they are read-only).</li>
+            <li>Read-only tags can be clicked only if there is a corresponding search associated with clicking that tag.</li>
+            <li>Removable tags are removable by clicking their "X" mark or by pressing backspace or delete when cursor is in the appropriate location.</li>
+            <li>Tags longer than XYZ characters are tooltipped according to <a href="tool-tips.html" ><b>tooltip rules.</b></a></li>        </ol>
+      </p>
+      </div>
+      </div>
+    </div>
+    <!--testing section--> 
+    <div class "section">
+    	<div class="row">
+          <div class="col s12 m12">
+              
+              <h3>References</h3>
+              <ul>
+              	<li><a href="http://ui-patterns.com/patterns/Tag">UI-Patterns on tags</a></li>
+                <li><a href="http://ux.stackexchange.com/questions/46695/tag-like-ui-element">UX StackExchange discussion on text input tag-like elements</a></li>
+                <li></li>
+              </ul>
+          </div>
+        </div>
+    
+    
+    </div>
+    
+  </div>
+  </div>
+  </div>
+  </div>
+  <br>
+  <br>
+  <div class="section"> </div>
+  </div>
+</main>
+<footer class="page-footer teal">
+  <div class="footer-copyright">
+    <div class="container"> Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a> </div>
+  </div>
+</footer>
+
+<!--  Scripts--> 
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> 
+<script src="js/materialize.js"></script> 
+<script src="js/init.js"></script>
+</body>
+</html>

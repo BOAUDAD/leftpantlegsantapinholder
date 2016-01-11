@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+<title>Search</title>
+<!-- CSS  -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<link href="css/fontello.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<style>
+.input-field label {
+	/*Not sure why, but a 30 px padding was added inside of style.css. This differs from the original Materialize styling.*/
+	padding-bottom: 0px !important;	
+}
+
+/*Again, not sure why this has padding.*/
+.collection{
+padding-bottom: 0px;
+padding-top: 0px;	
+}
+
+select:disabled {
+  color: rgba(0, 0, 0, 0.3); }
+
+.select-wrapper input.autocomplete:disabled {
+  color: rgba(0, 0, 0, 0.3);
+  cursor: default;
+  -webkit-user-select: none;
+  /* webkit (safari, chrome) browsers */
+  -moz-user-select: none;
+  /* mozilla browsers */
+  -ms-user-select: none;
+  /* IE10+ */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
+
+.select-wrapper i {
+  color: rgba(0, 0, 0, 0.3); }
+
+.select-autocomplete li.disabled {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: transparent; }
+
+
+/**
+ * These are styles for the search badges, and they will largely follow the tag format as well.
+ *
+ */
+ 
+span.search-badge {
+  min-width: 3rem;
+  padding: 0 6px;
+  text-align: center;
+  font-size: 1rem;
+  line-height: inherit;
+  color: #757575;
+  position: absolute;
+  right: 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+span.search-badge.new {
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: #fff;
+    background-color: #26a69a;
+    border-radius: 2px; }
+
+span.search-badge.federated {
+    font-weight: 300;
+	position: inherit;
+    font-size: 1.0rem;
+    color: #fff;
+    background-color: #26a69a;
+    border-radius: 2px; 
+	padding: 5px;'
+	display: inline-flex;
+	
+	}
+
+.search_term{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: 200px;
+    overflow-x: hidden;
+}
+
+.record-count{
+	display:inline-flex;
+}
+
+.search-suggest{
+	display: none;	
+	opacity: 0;
+	z-index: 999;
+	position: absolute;
+}
+</style>
+</head>
+<body>
+<header>
+  <nav class="top-nav blue-grey darken-4">
+    <div class="container">
+      <div class="nav-wrapper"> <a href="index.html" class="page-title light">Patterns</a> </div>
+    </div>
+  </nav>
+  <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="mdi-navigation-menu"></i></a></div>
+  <ul id="nav-mobile" class="side-nav fixed">
+    <li class="logo"><a id="logo-container" href="index.html" class="brand-logo"> <img id="logo-img" src="images/q2logo.png" height="50"></img> </a></li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Components</a>
+          <div class="collapsible-body">
+             <ul>
+              <li><a href="buttons.html">Buttons-Ecomm</a></li>
+              <li><a href="buttons-central.html">Buttons-Central</a></li>
+              <li><a href="fab.html">Buttons: Floating Action</a></li>
+              <li><a href="cards.html">Cards</a></li><li><a href="calendar.html">Date and time picker</a></li>
+              <li><a href="dialogs.html">Dialogs</a></li>
+              <li><a href="dividers.html">Dividers</a></li>
+              <li><a href="dropdowns.html">Dropdowns</a></li>
+              <li><a href="graphs.html">Graphs</a></li>
+              <li><a href="progress.html">Progress indicators</a></li>
+              <li><a href="side-menus.html">Side menus</a></li>
+              <li><a href="tabs.html">Tabs</a></li>
+              <li><a href="tables.html">Tables</a></li>
+              <li><a href="tags.html">Tags</a></li>
+              <li><a href="text-fields.html">Text Fields</a></li>
+              <li><a href="toggles.html">Toggles</a></li>
+              <li><a href="tool-tips.html">Tool tips</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</li>
+<li class="no-padding">
+    <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Styles</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="colors.html">Colors-Ecomm</a></li>
+              <li><a href="colors-central.html">Colors-Central</a></li>
+              <li><a href="icons.html">Icons</a></li>
+                 <li><a href="typography.html">Typography</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</li>
+<li class="no-padding">
+    <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Patterns</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="errors.html">Errors</a></li>
+              <li><a href="empty-states.html">Empty states</a></li>
+              <li><a href="filters.html">Filters</a></li>
+              <li><a href="launch-screens.html">Launch screens</a></li>
+              <li><a href="navigation.html">Navigation</a></li>
+              <li><a href="search.html">Search</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="bold"><a href="layout.html" class="waves-effect waves-teal">Layout</a> </li>
+    <li class="bold"><a href="accessibility.html" class="waves-effect waves-teal">Accessibility</a> </li>
+    <li class="bold"><a href="animation.html" class="waves-effect waves-teal">Animation</a> </li>
+  </ul>
+</header>
+<main>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container"> <br />
+      <br />
+      <h1 class="header black-text styleguide center">Search</h1>
+    </div>
+  </div>
+  <div class="container"> 
+    <!--styles and states section-->
+    <div class="section">
+      <h2>Styles</h2>
+      <div class="row">
+      <br/>
+         
+          
+         
+        </div>
+        <div class="col s12 m6">
+          <h3>General usage</h3>
+          <p class="grey-text text-darken-1">Search is a nearly universal interface component that can be used to find one or multiple types of records. </p>
+        </div>
+      </div>
+      
+      <div class="row">
+      	<div class="col s12 m6">
+        	<h3>Faceted search</h3>
+          <p class="grey-text text-darken-1">
+            	Facets are different parts of a single type of record. When a user is given the opportunity to search through all records of a single type, consider using the faceted search modality to allow them to narrow their search. 
+            </p>
+          <p> For instance, a user record has a name, phone number, address, and type (retail or commercial) associated with it. Exposing these facets to the user allows them to easily refine their search. </p>
+      	</div>
+        <div class="col s12 m6">
+        <form class="">
+              <div class="input-field">
+                  <input id="search_box" type="text" class="validate"/>
+                  <label for="search_box">Try faceted search here</label>
+                  <div class="collection search-suggest">
+                    <a href="#!" class="collection-item"><span class="new search-badge federated  pink darken-4">Name:</span><span class="search_term ">Tomlinson</span><span class="search-badge record-count ">12</span> <i aria-hidden="true" class="icon-ad icon-search-ad"><span class="icon-text">Number of ads</span></i></a>
+                    <a href="#!" class="collection-item"><span class="new search-badge federated teal darken-3">Phone:</span><span class="search_term ">Tomlinson</span><span class="search-badge record-count ">12</span> <i aria-hidden="true" class="icon-ad icon-search-ad"><span class="icon-text">Number of ads</span></i></a>
+                    <a href="#!" class="collection-item"><span class="new search-badge federated grey darken-1">Address:</span><span class="search_term ">Tomlinson</span><span class="search-badge record-count ">12</span> <i aria-hidden="true" class="icon-ad icon-search-ad"><span class="icon-text">Number of ads</span></i></a>
+                    <a href="#!" class="collection-item"><span class="new search-badge federated green darken-1">Username:</span><span class="search_term ">Tomlinson</span><span class="search-badge record-count ">12</span> <i aria-hidden="true" class="icon-ad icon-search-ad"><span class="icon-text">Number of ads</span></i></a>
+                  </div>
+              </div>
+        </form> 
+        </div>
+      </div>
+      <div class="row">
+      	<div class="col s12 m6">
+        	<h3>Federated search</h3>
+            <p class="grey-text text-darken-1">
+            	When a user can search across multiple types of related records (for instance, users, accounts, and customers) from one search box, use the federated search modality. Federated search offers the user the chance to either limit their search to one type of record out of many, or to simply let the search box decide what record types should be searched by default.
+            </p>
+            <p>NEEDS DEV WORK IN ORDER TO BE RIGHT.</p>
+            <div class="col s6">
+            <form class="col s6">
+              <div class="input-field s6">
+                  <input id="search_box" type="text" class="validate"/>
+                  <label for="search_box">Search things here</label>
+                  <div class="collection search-suggest">
+                    <a href="#!" class="collection-item"><span class="new search-badge federated col">All:</span><span class="search_term col s6">Tomlinson</span><span class="search-badge record-count col s3">12</span></a>
+                    <a href="#!" class="collection-item"><span class="new search-badge federated col">Logins:</span><span class="search_term col s6">Tomlinson</span><span class="search-badge record-count col s3">12</span></a>
+                    <a href="#!" class="collection-item"><span class="new search-badge federated col">Users:</span><span class="search_term col s6">Tomlinson</span><span class="search-badge record-count col s3">12</span></a>
+                    <a href="#!" class="collection-item"><span class="new search-badge federated col">Customers:</span><span class="search_term col s6">Tomlinson</span><span class="search-badge record-count col s3">12</span></a>
+                  </div>
+              </div>
+        </form>
+        </div>    
+        </div>
+      </div>
+
+    <!--end styles and states section--> 
+    
+    <!--referemces section-->
+    <div class="section no-divider">
+      <h2>References</h2>
+      <div class="row">
+        <div class="col s12 m12">
+          <ul>
+          	<li><a href="http://searchpatterns.org/">SearchPatterns.org</a></li>
+            <li><a href="https://www.ischool.utexas.edu/~i385e/readings/Warner-aTaxonomyPrimer.html">A Taxonomy Primer - synonym rings and other concepts for search and navigation</a></li>
+            <li><a href="http://drakees.com/#item=content-y925">Hierarchical tagging</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--end references section--> 
+    <div class="section no-divider">
+      <h2>Acceptance Criteria</h2>
+      <div class="row">
+          <div class="col s6 m6">
+          <p>
+          User testing (maybe we'd link to some definitions and procedures here):
+            <ol>
+                <li>Search suggestions capture a majority or the totality of all searchable entities.</li>
+                <li>Can be activated by most people. (define)</li>
+                <li>Is noticeable by most people. (define)</li>
+                <li></li>
+            </ol>
+          </p>
+          <p>
+          Tech testing (maybe we'd link to some testing procedures and standards here):
+            <ol>
+    
+                <li>The search box will discard old HTTP responses according to &lt;PROCEDURE&gt;</li>
+                <li>Hitting Enter searches all criteria.</li>
+                <li>Wildcard searches (using the asterisk) perform as expected.</li>
+                <li>Where applicable, icons provide added context to the number of results in the search dropdown.</li>
+               
+            </ol>
+          </p>
+          </div>
+          </div>
+    </div>
+
+    
+  </div>
+  </div>
+  </div>
+  </div>
+
+  </div>
+</main>
+<footer class="page-footer teal">
+  <div class="footer-copyright">
+    <div class="container"> Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a> </div>
+  </div>
+</footer>
+
+<!--  Scripts--> 
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> 
+<script src="js/materialize.js"></script> 
+<script src="js/init.js"></script>
+
+<script>
+
+	searchLevel1Keywords = ["Users:", "Customers:", "Logins:", "All:"];
+	searchLevel2Keywords = ["Phone:", "Name:", "Address:"];
+	
+	/** Forgive me; I'm calling them "switches" here for now. This function looks at the value
+	 * in a text input element and determines whether there is a string that can be extracted into
+	 * a switch. */
+	extractSwitches = function(element){
+		return true;
+	};
+	
+	
+	/**
+	 * In reality, this would tell you how many records there were for the given record type and search term.
+	 */	
+	loadRecordCount = function(recordType, searchTerm){
+		
+	}
+	
+	$(document).ready(function(e){
+			
+		$("#search_box").keyup(function(e){
+			
+			if($("#search_box").val() != ""){
+				$(".search-suggest")	.css({"display" : "block"});
+				$(".search-suggest")	.velocity({opacity: 1.0}, {duration: 200, queue: false, ease: "easeInOutCubic"});
+				extractSwitches($("#search_box")); //doesn't do anything right now
+				$(".search_term").text($("#search_box").val());
+				$(".record-count").text(Math.floor(Math.random()*100));
+			} else {
+				$(".search-suggest")	.velocity({opacity: 0.0}, {duration: 300, queue: false, ease: "easeInOutCubic"});
+				/* $(".search-suggest")	.css({"display" : "none"}); */ //This may need some sort of sleep or something because it happens too fast.
+			}
+			
+		});
+		
+	});
+
+</script>
+
+</body>
+</html>

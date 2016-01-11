@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+<title>Text fields</title>
+<!-- CSS  -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<link href="css/fontello.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<style></style>
+</head>
+<body>
+<header>
+  <nav class="top-nav blue-grey darken-4">
+    <div class="container">
+      <div class="nav-wrapper"> <a href="index.html" class="page-title light">Components</a> </div>
+    </div>
+  </nav>
+  <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="mdi-navigation-menu"></i></a></div>
+  <ul id="nav-mobile" class="side-nav fixed">
+    <li class="logo"><a id="logo-container" href="index.html" class="brand-logo"> <img id="logo-img" src="images/q2logo.png" height="50"></img> </a></li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Components</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="buttons.html">Buttons-Ecomm</a></li>
+              <li><a href="buttons-central.html">Buttons-Central</a></li>
+              <li><a href="fab.html">Buttons: Floating Action</a></li>
+              <li><a href="cards.html">Cards</a></li><li><a href="calendar.html">Date and time picker</a></li>
+              <li><a href="dialogs.html">Dialogs</a></li>
+              <li><a href="dividers.html">Dividers</a></li>
+              <li><a href="dropdowns.html">Dropdowns</a></li>
+              <li><a href="graphs.html">Graphs</a></li>
+              <li><a href="progress.html">Progress indicators</a></li>
+              <li><a href="side-menus.html">Side menus</a></li>
+              <li><a href="tabs.html">Tabs</a></li>
+              <li><a href="tables.html">Tables</a></li>
+              <li><a href="tags.html">Tags</a></li>
+              <li><a href="text-fields.html">Text Fields</a></li>
+              <li><a href="toggles.html">Toggles</a></li>
+              <li><a href="tool-tips.html">Tool tips</a> </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Styles</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="colors.html">Colors-Ecomm</a></li>
+              <li><a href="colors-central.html">Colors-Central</a></li>
+              <li><a href="icons.html">Icons</a></li>
+              <li><a href="typography.html">Typography</a> </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Patterns</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="errors.html">Errors</a></li>
+              <li><a href="empty-states.html">Empty states</a></li>
+              <li><a href="filters.html">Filters</a></li>
+              <li><a href="launch-screens.html">Launch screens</a></li>
+              <li><a href="navigation.html">Navigation</a></li>
+              <li><a href="search.html">Search</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="bold"><a href="layout.html" class="waves-effect waves-teal">Layout</a> </li>
+    <li class="bold"><a href="accessibility.html" class="waves-effect waves-teal">Accessibility</a> </li>
+    <li class="bold"><a href="animation.html" class="waves-effect waves-teal">Animation</a> </li>
+  </ul>
+</header>
+<main>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container"> <br>
+      <br>
+      <h1 class="header black-text styleguide center">Text fields</h1>
+    </div>
+  </div>
+  <div class="container">
+    <!--styles and states section-->
+    <div class="section">
+      <h2>Styles & States</h2>
+      <br>
+      <div class="row">
+        <div class="col s12 m6">
+          <h3>Normal & Focus</h3>
+          <p>Text fields have a 1px bottom border until they are in focus, at which point the border becomes 3px tall.  We do not use placeholders because users who skim forms before submitting can easily mistake placeholders for text inputs.</p>
+          <p><b>Type in the First Name field to see the interaction.</b></p>
+        </div>
+        <div class="col s12 m6">
+          <form>
+            <div class="input-field">
+              <input id="first_name" type="text" class="validate">
+              <i aria-hidden="true" class="icon-warning"><span class="icon-text">Warning</span></i>
+              <label for="first_name"> First Name </label>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6">
+          <h3>Disabled</h3>
+          <p>Disabled fields and corresponding labels are at 26% opacity to indicate that they are not actionable.</p>
+        </div>
+        <div class="col s12 m6">
+          <form>
+            <div class="input-field">
+              <input id="last_name" type="text" class="validate" disabled>
+              <i aria-hidden="true" class="icon-warning"><span class="icon-text">Warning</span></i>
+              <label for="last_name" class="disabled"> Last Name </label>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6">
+          <h3>Required</h3>
+          <!--<h4>If most fields are optional</h4>
+          <p>Include an asterisk next to the required fields.  Denoting only the exceptions helps reduce visual clutter.</p>
+          <br>
+          <h4>If most fields are required</h4>
+          <p>Forgo the required asterisks, and instead add "(optional)" to the right of the label of fields that are not required.</p>-->
+          <h4>If some fields are required</h4>
+          <p>Include an asterisk next to the required fields.</p>
+          <br>
+          <h4>If all fields are required</h4>
+          <p>Forgo the asterisk next to the label and include text above the form that indicates all fields must be completed.</p>
+        </div>
+        <div class="col s12 m6">
+          <form>
+            <div class="input-field">
+              <input id="username" type="text" class="validate" required>
+              <i aria-hidden="true" class="icon-warning"><span class="icon-text">Warning</span></i>
+              <label for="username" class="required"> Username </label>
+            </div>
+            <!--
+            <div class="input-field">
+              <input id="middle_name" type="text" class="validate" required>
+              <i aria-hidden="true" class="icon-warning"><span class="icon-text">Warning</span></i>
+              <label for="middle_name" class="optional"> Middle name </label>
+            </div>-->
+          </form>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col s12 m6">
+          <h3>Validation</h3>
+          <h4>Invalid</h4>
+          <p>An invalid field shows a 3px orange border and a warning icon—visual cues that are sufficient to indicate an error to a colorblind person.  When in focus, the invalid field also shows an intuitive error message.</p>
+          <!--<p><span style="color: red">NEEDS DEV WORK</span> If a user passes a required field without filling it out, the field becomes invalid.</p>-->
+          <p><b>Enter an incorrectly formatted email address to see the interaction.</b></p>
+          <br>
+          <h4>Valid</h4>
+          <p>Upon successful validation, a field returns to its normal state.</p>
+          <br>
+        </div>
+        <div class="col s12 m6">
+          <form>
+            <div class="input-field">
+              <input id="email" type="email" class="validate" required>
+              <i aria-hidden="true" class="icon-warning"><span class="icon-text">Warning</span></i>
+              <label for="email" data-error="wrong" >Email</label>
+              <div class="input-error">Invalid email</div>
+            </div>
+            <!--<div class="input-field">
+              <input id="url" type="url" class="validate" required>
+              <i aria-hidden="true" class="icon-warning"><span class="icon-text">Warning</span></i>
+              <label for="url" data-error="wrong" >Website</label>
+              <div class="input-error">Invalid URL</div>
+            </div>-->
+          </form>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col s12 m6">
+          <h3>Hints</h3>
+          <p>If applicable, hints appear below the field when the field is in focus.</p>
+          <p>Each hint disappears when it is satisfied.</p>
+          <p>Hints are a maximum of 2 lines to avoid overlapping the fields below.</p>
+          </ul>
+          <p><b>Focus on the Password field to see the interaction.</b></p>
+        </div>
+        <div class="col s12 m6">
+          <form>
+            <div class="input-field">
+              <input id="password" type="password" class="validate">
+              <i aria-hidden="true" class="icon-warning"><span class="icon-text">Warning</span></i>
+              <label for="password">Password</label>
+              <div class="input-hint">
+                <ul>
+                  <li>Here's an example of hint 1</li>
+                  <li>This is hint 2</li>
+                </ul>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--end styles and states section-->
+    <!--start text area section-->
+    <div class="section">
+      <h2>Text areas</h2>
+      <div class="row">
+        <div class="col s12 m6"> <br>
+          <p>Text areas look and function similar to text input fields, but allow for multiple lines of text.</p>
+          <p>Since text areas grow horizontally to accomodate additional lines, they should be placed at the bottom of forms wherever it makes sense.  This minimizes alignment problems with multi-column layouts.</p>
+          <p><b>Enter text to see the behavior.</b></p>
+        </div>
+        <div class="col s12 m6">
+          <form>
+            <div class="input-field">
+              <textarea id="textarea1" class="materialize-textarea"></textarea>
+              <label for="textarea1">Description</label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--end text area section-->
+    <!--start text area section-->
+    <div class="section">
+      <h2>Character counter</h2>
+      <div class="row">
+        <div class="col s12 m6"> <br>
+          <br>
+          <p>For optimal usability, let the user know where there are character restrictions by using the character counter, which appears on focus.</p>
+          
+          <p><span style="color: red;">NEEDS DEV WORK</span> Text that surpasses the maximum character count turns to #e0e0e0.</p>
+        </div>
+        <div class="col s12 m6">
+          <form>
+            <div class="input-field">
+              <input id="account_name" type="text" class="validate" length="30">
+              <i aria-hidden="true" class="icon-warning"><span class="icon-text">Warning</span></i>
+              <label for="account_name"> Account Name </label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--end text area section-->
+    <!--start labels section-->
+    <div class="section">
+      <h2>Labels</h2>
+      <br>
+      <div class="row">
+        <div class="col s12 m6">
+          <h3>Standard labels</h3>
+          <p>Use standard labels when there are many input fields on a screen, and on mobile phones, where real estate is limited.</p>
+        </div>
+        <div class="col s12 m6">
+          <form>
+            <div class="input-field">
+              <input id="first_name1" type="text" class="validate">
+              <i aria-hidden="true" class="icon-warning"><span class="icon-text">Warning</span></i>
+              <label for="first_name1"> First Name </label>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6">
+          <h3>Large labels</h3>
+          <p>Use header labels for simple forms on large screens, where input fields are sparse.  Header labels make optimal use of screen real estate, and they also allow users with screen readers to jump from header to header to hear an outline of the page's main content.</p>
+        </div>
+        <div class="col s12 m6">
+          <form>
+            <div class="input-field">
+              <input id="campaign_name" type="text" class="validate">
+              <label for="campaign_name" class="label-large"> Campaign Name </label>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6">
+          <h3>Label Accessibility</h3>
+          <p>To ensure that users using screen readers can easily associate form labels with their corresponding input fields, add “for” attribute to label tags to match the ids on the corresponding form fields, as shown. </p>
+        </div>
+        <div class="col s12 m6">
+          <xmp>
+<div class="input-field">
+  <input id="campaign_name" type="text" class="validate">
+  <label for="campaign_name">Campaign Name</label>
+</div>
+          </xmp>
+        </div>
+      </div>
+      <br>
+    </div>
+    <!--end labels section-->
+    <!--layout section-->
+    <div class="section">
+      <h2>Layout</h2>
+      <div class="row">
+        <div class="col s12 m12">
+          <p>Fields should have plenty of vertical space between them to allow for easy touch on mobile devices.  We recommend 44px between fields, and 44px between fields and their corresponding labels.  Fields should be horizontally aligned for a clean UI.</p>
+          <p>Since text areas grow horizontally to accomodate additional lines, they should be placed at the bottom of forms wherever it makes sense.  This minimizes alignment problems with multi-column layouts.</p>
+          <br>
+        </div>
+        <div class="col s12 m12">
+          <div class="gray-block center no-padding"><img src="images/campaign-details.jpg"</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end layout section-->
+
+  <!--start acceptance criteria-->
+  <div class="section no-divider">
+    <h2>Acceptance Criteria</h2>
+    <div class="row">
+      <div class="col s12 m12">
+        <h3>User testing:</h3>
+        <ol>
+          <li>Users understand that input fields are input fields.</li>
+          <li>Users understand which fields are required.</li>
+          <li>Hints and error messages make sense to users.</li>
+          <li>Most users do not become frustrated with the validation workflow.</li>
+        </ol>
+        <h3>Accessibility testing:</h3>
+        <ol>
+          <li>Forms can be completed using only a keyboard.</li>
+          <li>Users using screen readers can associate form labels with their input fields.</li>
+        </ol>
+        <h3>Tech testing:</h3>
+        <ol>
+          <li>The normal, in focus, disabled, invalid states, as well as hints and labels, match the designs provided.</li>
+        
+          <li>Individual hints disappear once they are satisfied.</li>
+          <li>All required fields are marked as shown.</li>
+          <li>Empty required fields become invalid upon submit.</li>
+          <li>Invalid entries for fields with specific rules (i.e. passwords) immediately display as invalid when the fields lose focus.</li>
+       
+        </ol>
+      </div>
+      <div class="col s6 m6"> </div>
+    </div>
+  </div>
+  <!--end acceptance criteria-->
+  </div>
+  </div>
+  </div>
+  </div>
+  <br>
+  <br>
+  <div class="section"> </div>
+  </div>
+</main>
+<footer class="page-footer teal">
+  <div class="footer-copyright">
+    <div class="container"> Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a> </div>
+  </div>
+</footer>
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/init.js"></script>
+<script>  $(document).ready(function() {
+    $('input#input_text, textarea#textarea1').characterCounter();
+  });</script>
+</body>
+</html>

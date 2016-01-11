@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+<title>Calendar</title>
+<!-- CSS  -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<link href="css/fontello.css" type="text/css" rel="stylesheet" media="screen,projection">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<style>
+/**
+* Custom datepicker styles to be more material than Materialize.
+*/
+
+
+/*Let's follow the button and pagination border radius value of 2px, instead of using a circle.*/
+.picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected {
+	border-radius: 2px;
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	-ms-transition: .3s ease;
+	transition: .3s ease;
+}
+/* Hover should follow buttons as well. */
+.picker__day--valid:hover {
+	border-radius: 2px;
+	background-color: rgba(38, 166, 154, 0.5);
+	-webkit-transform: scale(.9);
+	-moz-transform: scale(.9);
+	-ms-transform: scale(.9);
+	-o-transform: scale(.9);
+	transform: scale(.9);
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	-ms-transition: .3s ease;
+	transition: .3s ease;
+}
+.picker__day--today {
+	font-weight: bold;
+}
+/*Invalid days are grayed out in the same way as buttons.*/
+.picker__day--invalid, .picker__day--invalid:hover {
+	background-color: #f1f1f3 !important;
+	color: #9F9F9F !important;
+}
+</style>
+</head>
+<body>
+<header>
+  <nav class="top-nav blue-grey darken-4">
+    <div class="container">
+      <div class="nav-wrapper"> <a href="index.html" class="page-title light">Components</a> </div>
+    </div>
+  </nav>
+  <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="mdi-navigation-menu"></i></a></div>
+  <ul id="nav-mobile" class="side-nav fixed">
+    <li class="logo"><a id="logo-container" href="index.html" class="brand-logo"> <img id="logo-img" src="images/q2logo.png" height="50"></img> </a></li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Components</a>
+          <div class="collapsible-body">
+            <ul>
+<li><a href="buttons.html">Buttons-Ecomm</a></li>
+              <li><a href="buttons-central.html">Buttons-Central</a></li><li><a href="fab.html">Buttons: Floating Action</a></li>
+              <li><a href="cards.html">Cards</a></li><li><a href="calendar.html">Date and time picker</a></li>
+              <li><a href="dialogs.html">Dialogs</a></li>
+              <li><a href="dividers.html">Dividers</a></li>
+              <li><a href="dropdowns.html">Dropdowns</a></li>
+              <li><a href="graphs.html">Graphs</a></li>
+              <li><a href="progress.html">Progress indicators</a></li>
+              <li><a href="side-menus.html">Side menus</a></li>
+              <li><a href="tabs.html">Tabs</a></li>
+              <li><a href="tables.html">Tables</a></li>
+              <li><a href="tags.html">Tags</a></li>
+              <li><a href="text-fields.html">Text Fields</a></li>
+              <li><a href="toggles.html">Toggles</a></li>
+              <li><a href="tool-tips.html">Tool tips</a> </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Styles</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="colors.html">Colors-Ecomm</a></li>
+              <li><a href="colors-central.html">Colors-Central</a></li>
+              <li><a href="icons.html">Icons</a></li>
+              <li><a href="typography.html">Typography</a> </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Patterns</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="errors.html">Errors</a></li>
+              <li><a href="empty-states.html">Empty states</a></li>
+              <li><a href="filters.html">Filters</a></li>
+              <li><a href="launch-screens.html">Launch screens</a></li>
+              <li><a href="navigation.html">Navigation</a></li>
+              <li><a href="search.html">Search</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="bold"><a href="layout.html" class="waves-effect waves-teal">Layout</a> </li>
+    <li class="bold"><a href="accessibility.html" class="waves-effect waves-teal">Accessibility</a> </li>
+    <li class="bold"><a href="animation.html" class="waves-effect waves-teal">Animation</a> </li>
+  </ul>
+</header>
+<main>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container"> <br>
+      <br>
+      <h1 class="header black-text styleguide center">Date &amp; Time Picker</h1>
+    </div>
+  </div>
+  <div class="container"> 
+    <!--styles and states section-->
+    <div class="section">
+      <h2>Usage</h2>
+      <div class="row"> 
+        <!-- <div class="col s12 m6">
+          <h3>Triggering a date picker</h3>
+          
+              <form>
+              
+              	<i aria-hidden="true" class="icon-date"></i>
+              	<input type="text" class="datepicker">
+              </form>
+        </div>-->
+        <div class="col s12 m6">
+          <h3>Picking dates</h3>
+          <p class="grey-text text-darken-1">Many parts of our system rely on date-picking to create reports, set the start and end times for campaigns, and to filter table views. Date pickers can be used for selecting a single date or a date range, and should allow the user to easily select days without having to separately specify day, month, and year via a text input.</p>
+        </div>
+        <div class="col s12 m6">
+          <h3>Fallbacks</h3>
+          
+          <div class="select-wrapper" style="display: inline-block; width: 110px; margin-right: 20px;"><span class="caret" style="right: -100px; top: 7px;"><i aria-hidden="true" class="icon-expand"><span class="icon-text">Expand</span></i></span>
+            <input type="text" class="select-dropdown" readonly data-activates="select-options-fc5f71bb-45c8-cb3a-421e-d4cd90465c9f" value="November">
+            <ul id="select-options-fc5f71bb-45c8-cb3a-421e-d4cd90465c9f" class="dropdown-content select-dropdown" style="width: 425px; position: absolute; top: 0px; left: 0px; opacity: 1; display: none;">
+              <li class="active"><span>Page 1 &gt; Page 2</span></li>
+              <li class=""><span>Jun</span></li>
+              <li class=""><span>Page I &gt; Page II</span></li>
+            </ul>
+            <select class="initialized">
+              <!--<option value="" disabled selected>Choose your option</option>-->
+              <option value="1">Jun</option>
+              <option value="2">Jul</option>
+              <option value="3">Aug</option>
+              <option value="3">Sep</option>
+              <option value="3">Nov</option>
+              <option value="3">Dec</option>
+              <option value="3">Jan</option>
+              <option value="3">Feb</option>
+              <option value="3">Mar</option>
+              <option value="3">Apr</option>
+              <option value="3">May</option>
+            </select>
+          </div>
+          <div class="select-wrapper" style="display: inline-block; width: 60px; margin-right: 20px;"><span class="caret" style="right: -100px; top:7px;"><i aria-hidden="true" class="icon-expand"><span class="icon-text">Expand</span></i></span>
+            <input type="text" class="select-dropdown" readonly data-activates="select-options-fc5f71bb-45c8-cb3a-421e-d4cd90465c9f" value="6">
+            <ul id="select-options-fc5f71bb-45c8-cb3a-421e-d4cd90465c9f" class="dropdown-content select-dropdown" style="width: 425px; position: absolute; top: 0px; left: 0px; opacity: 1; display: none;">
+              <li class="active"><span>Page 1 &gt; Page 2</span></li>
+              <li class=""><span>21</span></li>
+              <li class=""><span>Page I &gt; Page II</span></li>
+            </ul>
+            <select class="initialized">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="3">4</option>
+              <option value="3">5</option>
+              <option value="3">6</option>
+              <option value="3">7</option>
+              <option value="3">8</option>
+              <option value="3">9</option>
+              <option value="3">10</option>
+              <option value="3">11</option>
+            </select>
+          </div>
+          <div class="select-wrapper" style="display: inline-block; width: 80px;"><span class="caret" style="right: -100px; top: 7px;"><i aria-hidden="true" class="icon-expand"><span class="icon-text">Expand</span></i></span>
+            <input type="text" class="select-dropdown" readonly data-activates="select-options-fc5f71bb-45c8-cb3a-421e-d4cd90465c9f" value="2015">
+            <ul id="select-options-fc5f71bb-45c8-cb3a-421e-d4cd90465c9f" class="dropdown-content select-dropdown" style="width: 425px; position: absolute; top: 0px; left: 0px; opacity: 1; display: none;">
+              <li class="active"><span>Page 1 &gt; Page 2</span></li>
+              <li class=""><span>21</span></li>
+              <li class=""><span>Page I &gt; Page II</span></li>
+            </ul>
+            <select class="initialized">
+              <option value="2015">2015</option>
+              <option value="2016">2016</option>
+              <option value="2017">2017</option>
+            </select>
+          </div>
+          <p>If the calendar can't be loaded for some reason or if the modal isn't appropriate for the page, the above treatment is used:</p>
+        </div>
+      </div>
+      </div>
+         <div class="section">
+      <h2>Formatting</h2>
+       <div class="row"> 
+   
+        <div class="col s12 m4">
+        <h3>Date</h3>
+        
+                  <div class="select-wrapper" style="display: inline-block; width: 150px; margin-right: 40px;">
+                  <span class="caret" style="right: -100px; top: 7px;"><i aria-hidden="true" class="icon-date"><span class="icon-text">Expand</span></i></span>
+            <input type="text" class="select-dropdown" readonly data-activates="select-options-fc5f71bb-45c8-cb3a-421e-d4cd90465c9f" value="November 30">
+            <ul id="select-options-fc5f71bb-45c8-cb3a-421e-d4cd90465c9f" class="dropdown-content select-dropdown" style="width: 425px; position: absolute; top: 0px; left: 0px; opacity: 1; display: none;">
+             
+            </ul>
+           
+          </div>
+          
+          <div class="select-wrapper" style="display: inline-block; width: 150px;">
+                  <span class="caret" style="right: -100px; top: 7px;"><i aria-hidden="true" class="icon-date"><span class="icon-text">Expand</span></i></span>
+            <input type="text" class="select-dropdown" readonly data-activates="select-options-fc5f71bb-45c8-cb3a-421e-d4cd90465c9f" value="January 1, 2016">
+            <ul id="select-options-fc5f71bb-45c8-cb3a-421e-d4cd90465c9f" class="dropdown-content select-dropdown" style="width: 425px; position: absolute; top: 0px; left: 0px; opacity: 1; display: none;">
+             
+            </ul>
+           
+          </div>
+           <p>Within the current calendar year, display the date without the year. Otherwise, display the date and year.</p>
+        </div>
+         
+         
+      
+        
+        
+        <div class="col s12 m4">
+        <h3>Time</h3>
+         <div class="select-wrapper" style="display: inline-block;">
+                  <span class="caret" style="right: -100px; top: 7px;"><i aria-hidden="true" class="icon-time"><span class="icon-text">Expand</span></i></span>
+            <input type="text" class="select-dropdown" readonly data-activates="select-options-fc5f71bb-45c8-cb3a-421e-d4cd90465c9f" value="9:00 AM">
+            <ul id="select-options-fc5f71bb-45c8-cb3a-421e-d4cd90465c9f" class="dropdown-content select-dropdown" style="width: 425px; position: absolute; top: 0px; left: 0px; opacity: 1; display: none;">
+            
+            </ul>
+           
+          </div>
+           <p>Time is displayed in the hh:mm format, where the first digit of the hour is only displayed if it is a number other than zero. AM and PM are uppercase with no periods, consistent with Material Design standards.</p>
+        </div>
+         
+         
+      
+         
+         
+         <div class="col s12 m4">
+        <h3>Combined date & time</h3>
+         <div class="select-wrapper" style="display: inline-block; width: 220px;">
+                  <span class="caret" style="right: -100px; top: 7px;"><i aria-hidden="true" class="icon-date"><span class="icon-text">Expand</span></i></span>
+            <input type="text" class="select-dropdown" readonly data-activates="select-options-fc5f71bb-45c8-cb3a-421e-d4cd90465c9f" value="January 1, 2016 9:00 AM">
+            <ul id="select-options-fc5f71bb-45c8-cb3a-421e-d4cd90465c9f" class="dropdown-content select-dropdown" style="width: 425px; position: absolute; top: 0px; left: 0px; opacity: 1; display: none;">
+            
+            </ul>
+           
+          </div>
+          <p>In cases where both a date and time is required, we can minimize user effort by combining them in one field and using the combined date & time picker shown below.</p>
+        </div>
+         
+      
+      
+      
+    </div></div>
+    <!--end styles and states section--> 
+    
+    <!--portrait styles section-->
+    <div class="section">
+      <h2>Portrait Styles</h2>
+      <p>The portrait date pickers have a 320px width and 480px height, which will prevent the need for scrolling on small phones.</p>
+      
+      <p>Dropdowns appear upon tabbing to the input fields, which allows users with visual impairments to access the picker with only their keyboard (see the keyboard input examples below).  Sighted users can achieve the same effect by double-clicking the input, which allows for more granular control over the time field.  We use dropdowns to limit user input, making them less prone to error.  These dropdowns should be disabled on mobile devices.</p>
+      <div class="row">
+        <div class="col s12 m4">
+          <h3>Selecting a date (mouse / touch)</h3>
+          <div class="gray-block center no-padding"><img src="images/portrait-select-date.png"/></div>
+          <p>Prior dates in the month can't be selected. In some cases, it's appropriate to limit the dates that a user can enter due to business logic.</p>
+           <p>The input name shown in topbar, reducing memory load.</p>
+          
+        </div>
+        <div class="col s12 m4">
+          <h3>Month (keyboard input)</h3>
+          <div class="gray-block center no-padding"><img src="images/portrait-select-date-keyboard.png"></div>
+          <p>Appears when the user double-clicks or tabs to the month using their keyboard.</p>
+        </div>
+                <div class="col s12 m4">
+          <h3>Date (keyboard input)</h3>
+          <div class="gray-block center no-padding"><img src="images/portrait-select-date-keyboard-2.png"/></div>
+          <p>Appears when the user double-clicks or tabs to the date using their keyboard.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6">
+          <h3>Selecting a year (mouse / touch)</h3>
+          <div class="gray-block center no-padding"><img src="images/portrait-select-year.png"/></div>
+          <p>Previous years may not be selected.</p>
+          
+          <p>We add more space between years than the Material Design default, allowing for easier touch.</p>
+        </div>
+        <div class="col s12 m6">
+          <h3>Keyboard input</h3>
+          <div class="gray-block center no-padding"><img src="images/portrait-select-year-keyboard.png"/></div>
+          <p>Appears when the user double-clicks or tabs to the year using their keyboard.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6">
+          <h3>Selecting an hour (mouse / touch)</h3>
+          <div class="gray-block center no-padding"><img src="images/portrait-select-hour.png"/></div>
+          
+
+
+        </div>
+                <div class="col s12 m6">
+          <h3>Keyboard input</h3>
+          <div class="gray-block center no-padding"><img src="images/portrait-select-hour-keyboard.png"/></div>
+          <p>Appears when the user double-clicks or tabs to the hour using their keyboard.</p>
+        </div>
+        </div>
+        <div class="row">
+        
+        <div class="col s12 m6">
+          <h3>Selecting a minute (mouse / touch)</h3>
+          <div class="gray-block center no-padding"><img src="images/portrait-select-minute.png"/></div>
+          <p>Dots have been added to the default Material Design clock for quick selection of half-hours.  Users cannot select anything other than hours or half-hours by using the clock.</p>
+        </div>
+        
+        <div class="col s12 m6">
+          <h3>Keyboard input</h3>
+          <div class="gray-block center no-padding"><img src="images/portrait-select-minute-keyboard.png"/></div>
+          <p>Appears when the user double-clicks or tabs to the minutes using their keyboard.  Users may select more specific times using the dropdown if desired.</p>
+        </div>
+      </div>
+    </div>
+    <!--styles section--> 
+    
+    
+    
+     <!--landscape styles section-->
+    <div class="section">
+      <h2>Landscape Styles</h2>
+      <p>The landscape date pickers have a 480px width and 320px height, which will prevent the need for scrolling on small phones.</p>
+      
+     
+      <div class="row">
+        <div class="col s12 m4">
+          <h3>Selecting a date (mouse / touch)</h3>
+          <div class="gray-block center no-padding"><img src="images/landscape-select-date.png"/></div>
+          <p>Prior dates in the month can't be selected. In some cases, it's appropriate to limit the dates that a user can enter due to business logic.</p>
+           <p>The input name shown in topbar, reducing memory load.</p>
+          
+        </div>
+        <div class="col s12 m4">
+          <h3>Month (keyboard input)</h3>
+          <div class="gray-block center no-padding"><img src="images/landscape-select-date-keyboard-1.png"></div>
+          <p>Appears when the user double-clicks or tabs to the month using their keyboard.</p>
+        </div>
+                <div class="col s12 m4">
+          <h3>Date (keyboard input)</h3>
+          <div class="gray-block center no-padding"><img src="images/landscape-select-date-keyboard-2.png"/></div>
+          <p>Appears when the user double-clicks or tabs to the date using their keyboard.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6">
+          <h3>Selecting a year (mouse / touch)</h3>
+          <div class="gray-block center no-padding"><img src="images/landscape-select-year.png"/></div>
+          <p>Previous years may not be selected.</p>
+          
+          
+          <p>We add more space between years than the Material Design default, allowing for easier touch.</p>
+        </div>
+        <div class="col s12 m6">
+          <h3>Keyboard input</h3>
+          <div class="gray-block center no-padding"><img src="images/landscape-select-year-keyboard.png"/></div>
+          <p>Appears when the user double-clicks or tabs to the year using their keyboard.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6">
+          <h3>Selecting an hour (mouse / touch)</h3>
+          <div class="gray-block center no-padding"><img src="images/landscape-select-hour.png"/></div>
+          
+
+
+        </div>
+                <div class="col s12 m6">
+          <h3>Keyboard input</h3>
+          <div class="gray-block center no-padding"><img src="images/landscape-select-hour-keyboard.png"/></div>
+          <p>Appears when the user double-clicks or tabs to the hour using their keyboard.</p>
+        </div>
+        </div>
+        <div class="row">
+        
+        <div class="col s12 m6">
+          <h3>Selecting a minute (mouse / touch)</h3>
+          <div class="gray-block center no-padding"><img src="images/landscape-select-minute.png"/></div>
+          <p>Dots have been added to the default Material Design clock for quick selection of half-hours.  Users cannot select anything other than hours or half-hours by using the clock.</p>
+        </div>
+        
+        <div class="col s12 m6">
+          <h3>Keyboard input</h3>
+          <div class="gray-block center no-padding"><img src="images/landscape-select-minute-keyboard.png"/></div>
+          <p>Appears when the user double-clicks or tabs to the minutes using their keyboard.  Users may select more specific times using the dropdown if desired.</p>
+        </div>
+      </div>
+    </div>
+    <!--end landscape styles section--> 
+    
+    <!--dev notes section-->
+    <div class="section">
+      <h2>Dev notes</h2>
+      <div class="row">
+        <div class="col s12 m12">
+          <ul class="bullets">
+            <li>The dates should behave as though they have the .wave-effect class applied, but I wasn't able to coerce them to do that.</li>
+            <li>Ideally, more than one date selector can be shown when picking ranges. This was beyond my abilities so I left it as an exercise for the reader.</li>
+            <li>If a daterange (start and end date) is being selected, two datepickers should appear in the modal. The left picker should always be <b>at most</b> the previous month before the right picker, and conversely the right picker should always be <b>at least</b> the month after the one on the left.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--dev notes section--> 
+    <!--testing section-->
+    <div class="section">
+      <h2>Acceptance Criteria</h2>
+      <div class="row">
+        <div class="col s12 m12">
+          <p>
+          <h3>User testing:</h3>
+          <ol>
+            <li>Users should be able to select any arbitrary date that is permitted by the logic of the page.</li>
+            <li>If dates in the past or some fixed time in the future are not valid selections, the interface should reflect these restrictions and users should be able to understand them.</li>
+          </ol>
+          </p>
+          <p>
+          <h3>Tech testing:</h3>
+          <ol>
+            <li>If a date is required and a user attempts to proceed without selecting one, follow the text input error conventions.</li>
+            <li>Any entered dates outside valid ISO-whatever ranges will default to today's date.</li>
+            <li>Invalid dates are tooltipped according to the <a href="tool-tips.html" ><b>tooltip rules.</b></a></li>
+            <li>Where datepickers are shown as modal dialogs, they should follow the <a href="dialogs.html" ><b>dialog rules.</b></a></li>
+          </ol>
+          </p>
+          
+          <p>
+          <h3>Accessibility testing:</h3>
+          <ol>
+            <li>Keyboard-accessible dropdowns are triggered upon tabbing to modal inputs.</li>
+          </ol>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--testing section-->
+    <div class "section">
+      <div class="row">
+        <div class="col s12 m12">
+          <h2>References</h2>
+          <ul>
+            <li><a href="https://www.google.com/design/spec/components/pickers.html#pickers-time-pickers">Material Design on date pickers</a></li>
+            <li><a href="https://www.google.com/design/spec/patterns/data-formats.html#data-formats-date-time">Material Design on data formats</a></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <br>
+  <br>
+  <div class="section"> </div>
+  </div>
+</main>
+<footer class="page-footer teal">
+  <div class="footer-copyright">
+    <div class="container"> Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a> </div>
+  </div>
+</footer>
+
+<!--  Scripts--> 
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> 
+<script src="js/materialize.js"></script> 
+<script src="js/init.js"></script> 
+<script>
+$('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15 // Creates a dropdown of 15 years to control year
+  });
+  
+ //TODO: make this happen better.
+ //Let's enable all dates...
+$('.picker__day').addClass("picker__day--valid");
+ 
+//...except all of the previous days in the month. Sorry, this is SO hacky but you get the idea.
+$('.picker__day--today').parent().prevAll().children().removeClass("picker__day--valid");
+$('.picker__day--today').parent().parent().prevAll().children().children().removeClass("picker__day--valid");
+$('.picker__day--today').parent().parent().prevAll().children().children().addClass("picker__day--invalid");
+$('.picker__day--today').parent().prevAll().children().addClass("picker__day--invalid");
+$(".picker__day--invalid").attr({
+	"data-position": "bottom",
+	"data-tooltip": "This day can't be selected",
+	"data-delay": "50"
+});
+$(".picker__day--invalid").tooltip({delay: 50});
+$('.picker__day--invalid').click(function(){return true;});
+
+//Get rid of the "Today" flat CTA on the bottom of the modal because it's unnecessary and breaks the patterns.
+$('.picker__today').remove();
+
+//All of the pickable dates should have the wave-effect applied to them.
+//$('.picker__day').toggleClass('waves-effect', true);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+<title>Layout</title>
+<!-- CSS  -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<style></style>
+</head>
+<body>
+<header>
+  <nav class="top-nav blue-grey darken-4">
+    <div class="container">
+      <div class="nav-wrapper"> <a href="index.html" class="page-title light">Layout</a> </div>
+    </div>
+  </nav>
+  <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="mdi-navigation-menu"></i></a></div>
+  <ul id="nav-mobile" class="side-nav fixed">
+    <li class="logo"><a id="logo-container" href="index.html" class="brand-logo"> <img id="logo-img" src="images/q2logo.png" height="50"></img> </a></li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Components</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="buttons.html">Buttons-Ecomm</a></li>
+              <li><a href="buttons-central.html">Buttons-Central</a></li>
+              <li><a href="fab.html">Buttons: Floating Action</a></li>
+              <li><a href="cards.html">Cards</a></li><li><a href="calendar.html">Date and time picker</a></li>
+              <li><a href="dialogs.html">Dialogs</a></li>
+              <li><a href="dividers.html">Dividers</a></li>
+              <li><a href="dropdowns.html">Dropdowns</a></li>
+              <li><a href="graphs.html">Graphs</a></li>
+              <li><a href="progress.html">Progress indicators</a></li>
+              <li><a href="side-menus.html">Side menus</a></li>
+              <li><a href="tabs.html">Tabs</a></li>
+              <li><a href="tables.html">Tables</a></li>
+              <li><a href="tags.html">Tags</a></li>
+              <li><a href="text-fields.html">Text Fields</a></li>
+              <li><a href="toggles.html">Toggles</a></li>
+              <li><a href="tool-tips.html">Tool tips</a> </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Styles</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="colors.html">Colors-Ecomm</a></li>
+              <li><a href="colors-central.html">Colors-Central</a></li>
+              <li><a href="icons.html">Icons</a></li>
+              <li><a href="typography.html">Typography</a> </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Patterns</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="errors.html">Errors</a></li>
+              <li><a href="empty-states.html">Empty states</a></li>
+              <li><a href="filters.html">Filters</a></li>
+              <li><a href="launch-screens.html">Launch screens</a></li>
+              <li><a href="navigation.html">Navigation</a></li>
+              <li><a href="search.html">Search</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="bold"><a href="layout.html" class="waves-effect waves-teal">Layout</a> </li>
+    <li class="bold"><a href="accessibility.html" class="waves-effect waves-teal">Accessibility</a> </li>
+    <li class="bold"><a href="animation.html" class="waves-effect waves-teal">Animation</a> </li>
+  </ul>
+</header>
+<main>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container"> <br>
+      <br>
+      <h1 class="header black-text styleguide center">Layout</h1>
+    </div>
+  </div>
+  <div class="container"> 
+    <!--begin research section-->
+    <div class="section">
+      <h2>Research on popular resolutions</h2>
+      <div class="row">
+        <div class="col s12 m12">
+          <p>Before establishing breakpoints, we did research to help us determine which resolutions were likely to be popular among FI employees.  While we do not collect screen resolution statistics for Central users, we can use analytics from the following data sources to make educated guesses about which breakpoints to use for an optimized experience on most devices.</p>
+          <p>Though we don't know for sure, we can assume that some visitors to the Q2 website are FI employees, thus we have included the most popular resolutions of visitors to the Q2 website below.  We have also listed screen resolution data collected by leading web developer information site W3Schools, web analytics for CBANC members (proven employees of U.S. financial institutions), and finally, we captured Google Analytics during our user research sessions in October 2015.</p>
+           <p>As shown below, a significant proportion of users have resolutions at 1280 and above.  We therefore believe it’s necessary to support the Material Design recommended breakpoints at 1280 and 1600, which will allow for optimized experiences on laptops and desktops with large monitors.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m12">
+        
+          <table>
+            <thead class="grey lighten-3">
+              <tr>
+                <th data-field="number">&nbsp;</th>
+                <th data-field="website" colspan="2">Q2 website (8/15 - 10/15)</th>
+                <th data-field="w3schools" colspan="2">W3Schools (1/15)</th>
+                <th data-field="cbanc" colspan="2">CBANC (1/15)</th>
+                <th data-field="cbanc" colspan="2">Google Analytics (10/15)</th>
+              </tr>
+            </thead>
+            <thead>
+              <tr>
+                <th data-field="number">#</th>
+                <th data-field="res">Resolution</th>
+                <th data-field="percent"># visits</th>
+                <th data-field="res">Resolution</th>
+                <th data-field="percent">%</th>
+                <th data-field="res">Resolution</th>
+                <th data-field="percent">%</th>
+                   <th data-field="res">Resolution</th>
+                <th data-field="percent">%</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>1920 x 1080</td>
+                <td>461</td>
+                <td>1366 x 768</td>
+                <td>33%</td>
+                <td>1920 x 1080</td>
+                <td>16.03%</td>
+                
+                <td>1440 x 900</td>
+                <td>30.77%</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>1366 x 768</td>
+                <td>175</td>
+                <td>Unspecified high resolution</td>
+                <td>32.7%</td>
+                <td>1280 x 1024</td>
+                <td>15.77%</td>
+                
+                <td>1366 x 768</td>
+                <td>23.08%</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>1280 x 1024</td>
+                <td>147</td>
+                <td>1920 x 1080</td>
+                <td>16%</td>
+                <td>1600 x 900</td>
+                <td>8.95%</td>
+                
+                <td>2560 x 1440</td>
+                <td>23.08%</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>1440 x 900</td>
+                <td>139</td>
+                <td>1280 x 1024</td>
+                <td>7%</td>
+                <td>1440 x 900</td>
+                <td>7.99%</td>
+                
+                
+                <td>1920 x 1080</td>
+                <td>7.69%</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>1680 x 1050</td>
+                <td>110</td>
+                <td>1024 x 768</td>
+                <td>4%</td>
+                <td>1680 x 1050</td>
+                <td>6.70%</td>
+                
+                
+                <td>2560 x 1329</td>
+                <td>7.69%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+   
+    </div>
+    <!--research--> 
+    
+    <!--begin breakpoints section-->
+    <div class="section">
+      <h2>Breakpoints & max width</h2>
+      <div class="row">
+        <div class="col s12 m12">
+          <p>Statistics suggest that FI employees are likely to use back office applications on laptops and desktops with a resolution above 1280, so we have established breakpoints at <b>1600</b> and <b>1280</b> to optimize experiences on large and extra large monitors.  While contextual inquiries show that FI employees rarely maximize their application windows during the workday, we also know that FI marketers like to show visual reports in presentations.  By accommodating large screen sizes, we ensure that any screenshots they take of a maximized window will represent our applications in the best light.</p>  
+          <p>Most screens will also have a <b>max width at 1600</b>, which will allow for easier scanning on across the content area.  Card views, however, do not need a max width because additional cards can added to rows without damaging usability or the look and feel of the UI.</p>
+          
+          <p>Finally, knowing that back office employees often shrink their windows, and because we hope to optimize experiences on all devices, we have included smaller breakpoints at <b>960</b> and <b>600</b> that will support tablets and handsets.  The below chart explains which breakpoints support different devices.</p>
+          <div class="gray-block center no-padding"> <img src="images/breakpoints.png"/> </div>
+        </div>
+      </div>
+      
+      <br>
+            <h3>Card views (no max width)</h3>
+      <div class="row">
+        <div class="col s12 m12">
+          <p>Card views, such as the homepage and Usage screens, do not require a max width because additional cards can be added to a row without damaging the look or usability of the interface.  In the example below, a there is a third card in each row at a screen width of 1920.</p> 
+          <div class="gray-block center no-padding"> <img src="images/dashboard-1920.png"/> </div>
+        </div>
+      </div>
+      
+      
+      
+            <br>
+            <h3>Non-card views (max width)</h3>
+      <div class="row">
+        <div class="col s12 m12">
+          <p>In all other views, the content area has a max width of 1600 and is centered within the screen.  This not only looks better, it also protects usability by allowing users to more easily scan content across a reasonable width.</p> 
+          <div class="gray-block center no-padding"> <img src="images/1600maxwidth.png"/> </div>
+        </div>
+      </div>
+      
+      <br>
+    </div>
+    <!--end breakpoints--> 
+    
+    <!--begin grid section-->
+    <div class="section">
+      <h2>Grid, margins & padding</h2>
+      <div class="row">
+        <div class="col s12 m12">
+          <p>We are using an adaptive 12-column grid, which creates visual consistency between layouts, but is flexible enough to support a variety of screen sizes when used with the above breakpoints. Grid gutters are consistently set to <strong>24px</strong>, while the columns expand and contract according to screen width.</p>
+          <p>On either side of the 12-column grid is a <b>40px</b> margin, while the top margin of the body is <b>44px</b>.  The content area has a <b>44px</b> top and bottom padding and a <b>30px</b> left and right padding.</p>
+          <div class="gray-block center no-padding"> <img src="images/grid-ecomm.jpg"/> </div>
+        </div>
+      </div>
+    </div>
+    <!--end grid--> 
+    
+    
+
+    
+    <div class="section">
+
+      <div class="row">
+            <h2>Resources & references</h2>
+     
+      <ul class="bullets">
+      <li><a href="https://www.google.com/design/spec/layout/units-measurements.html">Google Material Design units & measurements</a></li>
+      <li><a href="https://www.google.com/design/spec/layout/adaptive-ui.html#adaptive-ui-breakpoints">Google Material Design adaptive UI</a></li>
+      </ul>
+        <div class="col s12 m6"><h3><a href="https://www.dropbox.com/s/o5e7le82sbmyzkr/grid-central.psd?dl=0">Full 1280 grid (Central)</a></h3>
+        <div class="gray-block center no-padding">
+       
+          <a href="https://www.dropbox.com/s/o5e7le82sbmyzkr/grid-central.psd?dl=0"><img src="images/grid-central.jpg"/></a></div>
+        </div>
+        <div class="col s12 m6"><h3><a href="https://www.dropbox.com/s/5558lptmyo3ovei/grid-ecomm.psd?dl=0">1280 grid with left nav (E-comm)</a></h3><div class="gray-block center no-padding"><a href="https://www.dropbox.com/s/5558lptmyo3ovei/grid-ecomm.psd?dl=0"><img src="images/grid-ecomm-nospecs.jpg"/></a></div></div>
+      </div>
+    </div>
+    
+    <!--end resources--> 
+    
+    
+    <div class="section no-divider">
+      <h2>Acceptance Criteria</h2>
+      <div class="row">
+        <div class="col s12 m12">
+          <h3>User testing:</h3>
+          <ol>
+            <li>Users can easily interact with all functions on desktops and key functions on tablets.</li>
+            <li>(Post-MVP for E-comm) Users can easily interact with key functions on mobile devices of all sizes.</li>
+          </ol>
+          
+          <h3>Tech testing:</h3>
+          <ol>
+            <li>No content overlaps other elements or extends beyond its parent container when the browser is resized.</li>
+            <li>No text is cut off; it wraps or ellipsizes according to the design.</li>
+            <li>Card views do not have a max width, but are optimized for large screens.  The content area on non-card views has a max width of 1600.</li>
+            <li>Images and image placeholders scale proportionately.</li>
+             <li>CSS media queries are set at the specified breakpoints.</li>
+             <li>Touch zones maintain a minimum 44px width at all screen sizes.</li>
+             <li>Text, images, controls, and frames do not run into the edges of the screen.</li>
+         
+          </ol>
+        </div>
+        <div class="col s6 m6"> </div>
+      </div>
+    </div>
+    
+    <!--end acceptance criteria--> 
+    
+  </div>
+  </div>
+  </div>
+  </div>
+  <br>
+  <br>
+  <div class="section"> </div>
+  </div>
+</main>
+<footer class="page-footer teal">
+  <div class="footer-copyright">
+    <div class="container"> Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a> </div>
+  </div>
+</footer>
+
+<!--  Scripts--> 
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> 
+<script src="js/materialize.js"></script> 
+<script src="js/init.js"></script>
+</body>
+</html>

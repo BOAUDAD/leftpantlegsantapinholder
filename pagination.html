@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+<title>Pagination</title>
+<!-- CSS  -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<link href="css/fontello.css" type="text/css" rel="stylesheet" media="screen,projection">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<link href="css/tablestyles_temp.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<style>
+!important .pagination li a:hover {
+    color: #26a69a; 
+}
+
+.pagination li.active{
+    background-color: #00695c !important; 
+}
+
+.pagination li.active a{
+	color: white !important;
+}
+
+.pagination-arrow{
+ 	padding: 0px !important;	
+}
+
+.pagination-arrow a i{
+	font-size: 1.2rem;
+}
+
+.pagination{
+	float: right;	
+}
+
+/**Need to figure out where in the main CSS file the li line heights are being changed.**/
+ol li{
+	line-height: inherit;
+}
+	
+</style>
+</head>
+<body>
+<header>
+  <nav class="top-nav blue-grey darken-4">
+    <div class="container">
+      <div class="nav-wrapper"> <a href="index.html" class="page-title light">Components</a> </div>
+    </div>
+  </nav>
+  <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="mdi-navigation-menu"></i></a></div>
+  <ul id="nav-mobile" class="side-nav fixed">
+    <li class="logo"><a id="logo-container" href="index.html" class="brand-logo"> <img id="logo-img" src="images/q2logo.png" height="50"></img> </a></li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Components</a>
+          <div class="collapsible-body">
+             <ul>
+              <li><a href="buttons.html">Buttons-Ecomm</a></li>
+              <li><a href="buttons-central.html">Buttons-Central</a></li>
+              <li><a href="fab.html">Buttons: Floating Action</a></li>
+              <li><a href="cards.html">Cards</a></li><li><a href="calendar.html">Date and time picker</a></li>
+              <li><a href="dialogs.html">Dialogs</a></li>
+              <li><a href="dividers.html">Dividers</a></li>
+              <li><a href="dropdowns.html">Dropdowns</a></li>
+              <li><a href="graphs.html">Graphs</a></li>
+              <li><a href="progress.html">Progress indicators</a></li>
+              <li><a href="side-menus.html">Side menus</a></li>
+              <li><a href="tabs.html">Tabs</a></li>
+              <li><a href="tables.html">Tables</a></li>
+              <li><a href="tags.html">Tags</a></li>
+              <li><a href="text-fields.html">Text Fields</a></li>
+              <li><a href="toggles.html">Toggles</a></li>
+              <li><a href="tool-tips.html">Tool tips</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</li>
+<li class="no-padding">
+    <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Styles</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="colors.html">Colors-Ecomm</a></li>
+              <li><a href="colors-central.html">Colors-Central</a></li>
+              <li><a href="icons.html">Icons</a></li>
+                 <li><a href="typography.html">Typography</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</li>
+<li class="no-padding">
+    <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Patterns</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="errors.html">Errors</a></li>
+              <li><a href="empty-states.html">Empty states</a></li>
+              <li><a href="filters.html">Filters</a></li>
+              <li><a href="launch-screens.html">Launch screens</a></li>
+              <li><a href="navigation.html">Navigation</a></li>
+              <li><a href="search.html">Search</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>    <li class="bold"><a href="layout.html" class="waves-effect waves-teal">Layout</a> </li>
+    <li class="bold"><a href="accessibility.html" class="waves-effect waves-teal">Accessibility</a> </li>
+    <li class="bold"><a href="animation.html" class="waves-effect waves-teal">Animation</a> </li>
+  </ul>
+</header>
+<main>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container"> <br>
+      <br>
+      <h1 class="header black-text styleguide center">Pagination</h1>
+    </div>
+  </div>
+  <div class="container"> 
+    <!--styles and states section-->
+    <div class="section">
+      <h2>Usage</h2>
+      <div class="row">
+        <div class="col s12 m6">
+          <h3>When pagination is appropriate</h3>
+          <p class="grey-text text-darken-1">When a large collection of similar items (whether in list view, card grid view, or other view) needs to be displayed on one screen, pagination may be appropriate to break up the collection into manageable views. </p>
+          <!--example of pagination-->
+             <ul class="collection" id="paginated-collection">
+              <li class="collection-item">Item 1</li>
+              <li class="collection-item">Item 2</li>
+              <li class="collection-item">Item 3</li>
+              <li class="collection-item">Item 4</li>
+              <li class="collection-item">Item 5</li>
+            </ul>
+            <div class="row">
+
+            	<div class="col s8 offset-s2 l9">
+                    <ul class="pagination" id="pagination-controls-example">
+                        <li class="waves-effect active"><a href="#!" class="page-control">1</a></li>
+                        <li class="waves-effect"><a href="#!" class="page-control">2</a></li>
+                        <li class="waves-effect"><a href="#!" class="page-control">3</a></li>
+                        <li class="waves-effect"><a href="#!" class="page-control">4</a></li>
+                        <li class="waves-effect"><a href="#!" class="page-control">5</a></li>
+                    </ul>
+                </div>
+                <!-- Number of records per page selection -->
+                
+                <!-- Begin page traversal aka pagination arrow controls -->
+                <div class="col s4 offset-s4 l3">
+                    <ul class="pagination">
+                        <li class="waves-effect enabled pagination-arrow" id="previous_page">
+                            <a href="#!"><i class="icon-chevron_left icon-s"></i></a>
+                        </li>
+                        <li class="waves-effect enabled pagination-arrow" id="next_page">
+                            <a href="#!"><i class="icon-chevron_right icon-s"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End page traversal aka pagination arrow controls -->
+                
+              </div>
+            <!--end pagination example--> 
+        </div>
+        <div class="col s12 m6">
+          <h3>When it's NOT appropriate</h3>
+          <p class="grey-text text-darken-1">If <b>any of the following</b> apply to a collection of items, you should consider using something other than pagination (such as plain old scrolling):
+              <ol>
+                <li>If the collection always contains a fixed total number of items</li>
+                <li>If there must only be one item shown at a time (such as in a carousel or tabbed preview of a smaller collection)</li>
+                <li>If we cannot guarantee that the maximum number of items shown will be fixed (if you say there will be &lt;= 10 results per page, don't lie)</li>
+                <li>If each item takes up so much of the page that users think there aren't more items</li>
+              </ol>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+      	<div class="col m6">
+        	<h3>Placement</h3>
+          	<p class="grey-text text-darken-1">
+            	Pagination controls can appear at the bottom of a list view or in the upper right of a graphic set (such as a in a graph with more data points than can fit on the current page). 
+                
+            </p>
+        </div>
+        <div class="col m6">
+        <img src="images/Pagination_UpperCornerExample.png" width=400>
+        </div>
+      </div>
+      <div class="row">
+      	<div class="col s12">
+          <h3>Other considerations</h3>
+          <p class="grey-text text-darken-1">
+              <ol>
+                    <li>If your page has a filterable table with pagination controls, it should have <a href="https://en.wikipedia.org/wiki/Deep_linking"><b>deep-linking information in its URL</b></a> that allows a user to share a link with an expectation that the results will be <b>reasonably similar</b> when they return. Of course, with databases being what they are, nothing is 100% guaranteed, but if a user needs to return to the middle 20 items that meet certain filter selections, they should be able to do so.</li>
+                    <li>If a deep link goes out of bounds (such as to a page of results that doesn't exist given the filter options), the table should just display the first page. The URL should then be updated to reflect that the first page is shown.</li>
+                    <li>See the <a href=".html"><b>filtering</b></a> and <a href="empty-states.html"><b>empty states</b></a> sections for more info on what happens if a URL deep links and/or filters down to something that doesn't have any results. </li>
+                    <li>If loading a list page requires a network call, follow the <a href="progress.html"><b>progress indicator</b></a> pattern.</li>
+                    
+                </ol>
+          </p>
+      	</div>
+      </div>
+    </div
+    ><!--end styles and states section--> 
+     <!--testing section-->
+    <div class="section">
+      <h2>Acceptance Criteria</h2>
+      <div class="row">
+          <div class="col s12 m12">
+              <p>
+              <h3>User testing:</h3>
+                <ol>
+                    <li>Users should be able to be able to articulate what they're seeing on any given page accurately (eg, "this is the third page of results for all campaigns with 'Bill' in the name. I think they're sorted by start date.")</li>
+                    <li>Accessing an arbitrary page should meet minimum usability standards (44px click zones, acceptable error rates, etc.)</li>
+                </ol>
+              </p>
+              <p>
+              <h3>Tech testing:</h3>
+                <ol>
+                    <li>Deep linking should return the same items in the same order across two requests given no changes to the database entries EXCEPT, for instance, if the status of a campaign changes on its own.</li>
+                    <li>Out-of bounds pages are never available for clicking.</li>
+                    <li>No more than 8 spaces for pages should be visible.</li>
+                    <li>The first and last pages are always available for clicking.</li>
+                    <li>At mobile widths, the previous/next controls appear in the center, underneath the page number controls.</li>
+                    <li>If the user is on the last or first page of results, the "next" and "previous" controls should be disabled, respectively.</li>
+                    <li>Depending on the number of pages and the current page highlighted, the options should appear as follows:
+                    	<ul>
+                        	<li>Only 5 pages, first page shown: <b>1</b>, 2, 3, 4, 5</li> 
+                            <li>Only 5 pages, second page shown: 1, <b>2</b>, 3, 4, 5</li> 
+                            <li>More than 5 pages, second page shown: 1, <b>2</b>, 3, 4, 5, 6,..., 183</li>
+                            <li>More than 5 pages, 30th page shown: 1, ..., 29, <b>30</b>, 31, 32,..., 183</li> 
+                        </ul>
+                    
+                    </li>
+                </ol>
+              </p>
+          </div>
+      </div>
+    </div>
+    <!--testing section-->
+    <!-- start references -->
+   <div class "section">
+    	<div class="row">
+          <div class="col s12">
+              
+              <h3>References</h3>
+              <ul>
+              	<li><a href="https://www.google.com/design/spec/components/data-tables.html#data-tables-tables-within-cards">Material Design on tables within cards (good example of keeping pagination controls together and to the right)</a></li>
+                <li><a href="https://www.npmjs.com/package/ember-cli-deeplink-component">An ember-cli component for deep-linking</a></li>
+                <li><a href="http://www.smashingmagazine.com/2007/11/pagination-gallery-examples-and-good-practices/">Smashing magazine's guidelines for pagination (a bit old but relevant)</a></li>
+                <li><a href="http://quince.infragistics.com/Patterns/Paging.aspx">Quince on pagination, and some good examples as to why explicit "first" and "last" buttons ought be considered an antipattern</a></li>
+                
+              </ul>
+          </div>
+        </div>
+    </div>
+    <!-- end references -->
+     
+  </div>
+  </div>
+  </div>
+  </div>
+  <br>
+  <br>
+  
+  <div class="section"> </div>
+  </div>
+</main>
+<footer class="page-footer teal">
+  <div class="footer-copyright">
+    <div class="container"> Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a> </div>
+  </div>
+</footer>
+
+<!--  Scripts--> 
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> 
+<script src="js/materialize.js"></script> 
+<script src="js/init.js"></script>
+<script>
+
+/**
+ * Basic demo showing that the pagination selection changes with clicking, and that it shows different parts of the collection.
+ */
+
+function changePage(target){
+	
+	//First, get numbers of things
+	newPageNumber = $(target).text();
+	numItems = $("#paginated-collection").children().length;
+	
+	//When it's clicked, change the active item to the clicked one
+	$("#pagination-controls-example .active").toggleClass("active");
+	$(target).parent().toggleClass("active");
+	
+	
+	//Next, swap out the list items so that only the appropriate ones are showing.
+	$("#paginated-collection li").each(function(index, element){
+		$(element).text('Item ' + ((numItems*newPageNumber-1)+index));
+	});
+	
+}
+
+$(document).ready(function(e){
+	$(".page-control").click(function(e) {
+		changePage(this);
+    });
+	
+	$().click(function(e) {
+		changePage(this);
+    });
+	
+	$().click(function(e) {
+		changePage(this);
+    });
+});
+
+
+</script>
+</body>
+</html>

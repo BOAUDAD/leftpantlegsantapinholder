@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+<title>Buttons</title>
+<!-- CSS  -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<style>
+.floating-toolbar {
+	border-radius: 50px;
+	background: transparent;
+	transition-property: border-radius, background-color, bottom, right, left;
+	transition-duration: .75s, 2s, .5s, .5s, .5s;
+	transition-delay: .25s, 0s, .25s, .25s, .25s;
+}
+.floating-toolbar.bottom.open {
+	transition-property: border-radius, background-color, bottom, right, left;
+	transition-duration: .75s, 2s, .5s, .5s, .5s;
+	transition-delay: 0s, 0s, .25s, .25s, .25s;
+	background-color: #009688;
+	border-radius: 0px;
+	bottom: 0rem !important;
+	right: 0rem !important;
+	left: 0rem !important;
+}
+</style>
+</head>
+<body>
+<header>
+  <nav class="top-nav blue-grey darken-4">
+    <div class="container">
+      <div class="nav-wrapper"> <a href="index.html" class="page-title light">Components</a> </div>
+    </div>
+  </nav>
+  <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="mdi-navigation-menu"></i></a></div>
+  <ul id="nav-mobile" class="side-nav fixed">
+    <li class="logo"><a id="logo-container" href="index.html" class="brand-logo"> <img id="logo-img" src="images/q2logo.png" height="50"></img> </a></li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Components</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="buttons.html">Buttons-Ecomm</a></li>
+              <li><a href="buttons-central.html">Buttons-Central</a></li><li><a href="fab.html">Buttons: Floating Action</a></li>
+              <li><a href="cards.html">Cards</a></li>
+              <li><a href="calendar.html">Date and time picker</a></li>
+              <li><a href="dialogs.html">Dialogs</a></li>
+              <li><a href="dividers.html">Dividers</a></li>
+              <li><a href="dropdowns.html">Dropdowns</a></li>
+              <li><a href="graphs.html">Graphs</a></li>
+              <li><a href="progress.html">Progress indicators</a></li>
+              <li><a href="side-menus.html">Side menus</a></li>
+              <li><a href="tabs.html">Tabs</a></li>
+              <li><a href="tables.html">Tables</a></li>
+              <li><a href="tags.html">Tags</a></li>
+              <li><a href="text-fields.html">Text Fields</a></li>
+              <li><a href="toggles.html">Toggles</a></li>
+              <li><a href="tool-tips.html">Tool tips</a> </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Styles</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="colors.html">Colors-Ecomm</a></li>
+              <li><a href="colors-central.html">Colors-Central</a></li>
+              <li><a href="icons.html">Icons</a></li>
+              <li><a href="typography.html">Typography</a> </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Patterns</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="errors.html">Errors</a></li>
+              <li><a href="empty-states.html">Empty states</a></li>
+              <li><a href="filters.html">Filters</a></li>
+              <li><a href="launch-screens.html">Launch screens</a></li>
+              <li><a href="navigation.html">Navigation</a></li>
+              <li><a href="search.html">Search</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="bold"><a href="layout.html" class="waves-effect waves-teal">Layout</a> </li>
+    <li class="bold"><a href="accessibility.html" class="waves-effect waves-teal">Accessibility</a> </li>
+    <li class="bold"><a href="animation.html" class="waves-effect waves-teal">Animation</a> </li>
+  </ul>
+</header>
+<main>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container"> <br>
+      <br>
+      <h1 class="header black-text styleguide center">Floating Action Buttons</h1>
+    </div>
+  </div>
+  <div class="container"> 
+    <!--styles and states section-->
+    <div class="section">
+      <h2>Styles & States</h2>
+      <div class="row"> <br>
+        <div class="col s12 m4">
+          <div class="gray-block center" style="margin-bottom: 20px;"> <a class="btn-floating btn-large waves-effect waves-circle waves-light"><i class="material-icons">add</i></a> </div>
+        </div>
+        <div class="col s12 m8">
+          <h3 style="margin-top: 0px;">Default size (56px)</h3>
+          <p>Floating action buttons are used for a primary action on the screen and feature a circled icon floating above the UI. Use the default 56px size for FABs unless it breaks visual continuity with other items on the screen.  The icon inside the button is 24px, consistent with other icons throughout the app.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="gray-block center no-padding"><img src="images/mini-fab.png"/></div>
+        </div>
+        <div class="col s12 m8">
+          <h3>Mini size (44px minimum)</h3>
+          <p>If the default size breaks visual consistency with other elements on the screen, use a smaller size that is more consistent with the rest of the interface.  The minimum recommended size is 44px, consistent with other touch zones throughout the application, while the icon can remain at at 24px.</p>
+        </div>
+      </div>
+    </div>
+    <!--end styles and states section--> 
+    
+    <!--layout section-->
+    <div class="section">
+      <h2>Layout</h2>
+      <div class="row"> <br>
+        <div class="col s12 m4">
+          <h3 style="margin-top: 0px;">Distance from edge</h3>
+          <div class="gray-block center no-padding"><img src="images/mini-fab-with-specs.png"/></div>
+        </div>
+        <div class="col s12 m2">
+          <h3 style="margin-top: 0px;">&nbsp;</h3>
+          <p>FABs are at least 16px from the edge on mobile devices.</p>
+        </div>
+        <div class="col s12 m4">
+          <h3 style="margin-top: 0px;">&nbsp;</h3>
+          <div class="gray-block no-padding"><img src="images/fab-desktop.png" /></div>
+        </div>
+        <div class="col s12 m2">
+          <h3 style="margin-top: 0px;">&nbsp;</h3>
+          <p>On desktop and tablet, FABs are at least 24px from the edge.</p>
+        </div>
+      </div>
+      <div class="row"> <br>
+        <div class="col s12 m12"> <br>
+          <h3 style="margin-top: 0px;">FAB placement</h3>
+          <p>Floating action buttons should be attached to structural elements on a screen, such as sheets and toolbars.</p>
+          <div class="gray-block center no-padding"><img src="images/fab-attach1.png"/></div>
+          <br>
+          <br>
+          <div class="gray-block center no-padding"><img src="images/fab-attach2.png"/></div>
+        </div>
+      </div>
+    </div>
+    <!--end layout section--> 
+    
+    
+     <!--tooltips section-->
+    <div class="section">
+      <h2>Tooltips</h2>
+      <div class="row">
+        <div class="col s12 m12">
+          
+          <br>
+        </div>
+        <div class="col s12 m4">
+          <div class="gray-block center" style="margin-bottom: 20px;"> <a class="btn-floating btn-large waves-effect waves-circle waves-light tooltipped" data-position="right" data-delay="50" data-tooltip="Add a new campaign" id="partialExample"><i class="material-icons">add</i></a> </div>
+        </div>
+        <div class="col s12 m8">
+          
+          <p>To help users understand the function of the floating action button, each FAB should have a tooltip on hover or long press.  <a href="tool-tips.html">Read more about tooltips here.</a></p>
+        </div>
+      </div>
+
+    </div>
+    
+    <!--end tooltips section--> 
+    
+    
+    
+   
+    
+    <!--use cases section-->
+    <div class="section">
+      <h2>Use Case Rules</h2>
+      <div class="row"> <br>
+        <div class="col s12 m4">
+          <div class="gray-block center no-padding"><img src="images/fab-single.png"/></div>
+        </div>
+        <div class="col s12 m8">
+          <h3 style="margin-top: 0px;">One per screen</h3>
+          <p>Use only one floating action button per screen in order to maintain its prominence.</p>
+        </div>
+      </div>
+      <div class="row"> <br>
+        <div class="col s12 m4">
+          <div class="gray-block center no-padding"><img src="images/fab-positive.png"/></div>
+        </div>
+        <div class="col s12 m8">
+          <h3 style="margin-top: 0px;">Positive actions only</h3>
+          <p>Do not use the floating action button for minor or destructive actions, such as delete or archive.</p>
+        </div>
+      </div>
+      <div class="row"> <br>
+        <div class="col s12 m4">
+          <div class="gray-block center no-padding"><img src="images/fab-menu.png"/></div>
+        </div>
+        <div class="col s12 m8">
+          <h3 style="margin-top: 0px;">No overflow menus</h3>
+          <p>Don't put overflow menus in floating action buttons.</p>
+        </div>
+      </div>
+      <div class="row"> <br>
+        <div class="col s12 m4">
+          <div class="gray-block center no-padding"><img src="images/fab-block.png"/></div>
+        </div>
+        <div class="col s12 m8">
+          <h3 style="margin-top: 0px;">Don't block important elements</h3>
+          <p>While the floating action button should be above content, it should not block other important elements.</p>
+        </div>
+      </div>
+    </div>
+    <!--end use cases section--> 
+    
+     <!--transitions section-->
+    <div class="section">
+      <h2>Transitions</h2>
+      <div class="row">
+        <div class="col s12 m12">
+          <p>Floating action buttons are meant to be flexible, and we can use animation to add delightful effects and smooth transitions to the primary actions on the screen.</p>
+          <br>
+        </div>
+        <div class="col s12 m4">
+          <div class="gray-block center" style="margin-bottom: 20px;"> <a class="btn-floating btn-large waves-effect waves-circle waves-light"><i class="material-icons">add</i></a> </div>
+        </div>
+        <div class="col s12 m8">
+          <h3 style="margin-top: 0px;">Waves</h3>
+          <p>When the FAB simply triggers an action elsewhere on the screen or navigates to a new screen, use the waves animation that is used on other buttons.  In this animation, the waves expand outward from where the button was pressed. </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="gray-block center" style="margin-bottom: 20px;">
+            <div class="floating-toolbar bottom"> <a class="btn-floating btn-large waves-effect" id="toolbar" onclick="myFunction()"> <i class="large material-icons">mode_edit</i> </a> </div>
+          </div>
+        </div>
+        <div class="col s12 m8">
+          <h3 style="margin-top: 0px;">Morphing</h3>
+          <p>A floating action button can also morph into a toolbar upon press or from a toolbar upon scrolling. The toolbar should contain related actions. </p>
+        </div>
+      </div>
+    </div>
+    
+    <!--end transitions section--> 
+    
+    <!--start acceptance criteria-->
+    <div class="section no-divider">
+      <h2>Acceptance Criteria</h2>
+      <div class="row">
+        <div class="col s12 m12">
+          <h3>User testing:</h3>
+          <ol>
+            <li>Users understand the function of the floating action buttons.</li>
+            <li>Tooltip content makes sense to users.</li>
+          </ol>
+          <h3>Accessibility testing:</h3>
+          <ol>
+            <li>Screen readers read tooltips associated with buttons.</li>
+            <li>Users can tab to floating action buttons.</li>
+          </ol>
+          <h3>Tech testing:</h3>
+          <ol>
+            <li>FABs meet the minimum size requirement of 44px and icons are 24px.</li>
+            <li>FABs have appropriate hover and pressed states.</li>
+            <li>Tooltips appear upon hover for all floating action buttons.</li>
+            <li>FABs have the specified distance from the screen's edge.</li>
+            <li>There is only one FAB per screen.</li>
+            <li>FABs have positive actions.</li>
+            <li>FABs do not contain overflow menus.</li>
+            <li>FABs do not block important content.</li>
+          </ol>
+        </div>
+        <div class="col s6 m6"> </div>
+      </div>
+    </div>
+    <!--end acceptance criteria--> 
+    
+  </div>
+  </div>
+  </div>
+  </div>
+  <br>
+  <br>
+  <div class="section"> </div>
+  </div>
+</main>
+<footer class="page-footer teal">
+  <div class="footer-copyright">
+    <div class="container"> Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a> </div>
+  </div>
+</footer>
+
+<!--  Scripts--> 
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> 
+<script src="js/materialize.js"></script> 
+<script src="js/init.js"></script> 
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+<script src="http://rawgit.com/sam-g-steel/MaterializeJS/master/libs/materialize/js/materialize.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<script>
+$(".floating-toolbar").click(function() {
+    var $this = $(this);
+    var buttonStyle = window.getComputedStyle($this.find("#toolbar")[0], null);
+    var fillColor = buttonStyle.backgroundColor;
+
+    if (!$this.hasClass("open")) {
+        $this.css("left", $this.offset().left);
+        $this.css("background-color", fillColor);
+        $this.css("min-height", buttonStyle.height);
+        $this.addClass("open");
+    } else {
+        $this.removeClass("open");
+        $this.css("background-color", "transparent");
+    }
+});
+</script> 
+<script>
+$(document).ready(function(){
+    $("#toolbar").click(function(){
+        $("#toolbar").hide();
+    });
+});
+</script>
+</body>
+</html>

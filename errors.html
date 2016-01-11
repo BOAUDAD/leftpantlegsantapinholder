@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+<title>Errors</title>
+<!-- CSS  -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<style>
+
+/*Here are stylies for toasts*/
+#toast-container {
+    display: block;
+    position: fixed;
+    z-index: 1001;
+}
+
+.toast {
+	float: right;
+    border-radius: 2px;
+    top: 0;
+    width: auto;
+    clear: both;
+    margin-top: 10px;
+    position: relative;
+    max-width: 100%;
+    height: 48px;
+    line-height: 48px;
+    background-color: #323232;
+    padding: 0 25px;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #fff;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+.container-load-error{
+	opacity: 0.0;
+	display: none;
+}
+
+/* This is a new, smaller spinner style to accomodate button-sized text. */
+.preloader-wrapper.x-small {
+    width: 13px;
+    height: 13px; 
+	margin-right: 13px;
+}
+
+.spinner-gray, .spinner-gray-only {
+  border-color: #9F9F9F; 
+ }
+
+.active .spinner-layer.spinner-blue-only, .active .spinner-layer.spinner-red-only, .active .spinner-layer.spinner-yellow-only, .active .spinner-layer.spinner-green-only,  .active .spinner-layer.spinner-gray-only{
+  /* durations: 4 * ARCTIME */
+  opacity: 1;
+  -webkit-animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
+  animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both; 
+  }
+  
+  
+ @-webkit-keyframes gray-fade-in-out {
+  from {
+    opacity: 0; }
+
+  40% {
+    opacity: 0; }
+
+  50% {
+    opacity: 1; }
+
+  75% {
+    opacity: 1; }
+
+  76% {
+    opacity: 0; } 
+	
+}
+
+
+@keyframes gray-fade-in-out {
+  from {
+    opacity: 0; }
+
+  40% {
+    opacity: 0; }
+
+  50% {
+    opacity: 1; }
+
+  75% {
+    opacity: 1; }
+
+  76% {
+    opacity: 0; } 
+	
+}
+
+
+</style>
+</head>
+<body>
+<header>
+  <nav class="top-nav blue-grey darken-4">
+    <div class="container">
+      <div class="nav-wrapper"> <a href="index.html" class="page-title light">Patterns</a> </div>
+    </div>
+  </nav>
+  <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="mdi-navigation-menu"></i></a></div>
+  <ul id="nav-mobile" class="side-nav fixed">
+    <li class="logo"><a id="logo-container" href="index.html" class="brand-logo"> <img id="logo-img" src="images/q2logo.png" height="50"></img> </a></li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Components</a>
+          <div class="collapsible-body">
+             <ul>
+                            <li><a href="buttons.html">Buttons-Ecomm</a></li>
+              <li><a href="buttons-central.html">Buttons-Central</a></li>
+              <li><a href="fab.html">Buttons: Floating Action</a></li>
+              <li><a href="cards.html">Cards</a></li><li><a href="calendar.html">Date and time picker</a></li>
+              <li><a href="dialogs.html">Dialogs</a></li>
+              <li><a href="dividers.html">Dividers</a></li>
+              <li><a href="dropdowns.html">Dropdowns</a></li>
+              <li><a href="graphs.html">Graphs</a></li>
+              <li><a href="progress.html">Progress indicators</a></li>
+              <li><a href="side-menus.html">Side menus</a></li>
+              <li><a href="tabs.html">Tabs</a></li>
+              <li><a href="tables.html">Tables</a></li>
+              <li><a href="tags.html">Tags</a></li>
+              <li><a href="text-fields.html">Text Fields</a></li>
+              <li><a href="toggles.html">Toggles</a></li>
+              <li><a href="tool-tips.html">Tool tips</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</li>
+<li class="no-padding">
+    <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Styles</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="colors.html">Colors-Ecom</a></li>
+              <li><a href="colors-central.html">Colors-Central</a></li>
+              <li><a href="icons.html">Icons</a></li>
+                 <li><a href="typography.html">Typography</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</li>
+<li class="no-padding">
+    <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Patterns</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="errors.html">Errors</a></li>
+              <li><a href="empty-states.html">Empty states</a></li>
+              <li><a href="filters.html">Filters</a></li>
+              <li><a href="launch-screens.html">Launch screens</a></li>
+              <li><a href="navigation.html">Navigation</a></li>
+              <li><a href="search.html">Search</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>    <li class="bold"><a href="layout.html" class="waves-effect waves-teal">Layout</a> </li>
+    <li class="bold"><a href="accessibility.html" class="waves-effect waves-teal">Accessibility</a> </li>
+    <li class="bold"><a href="animation.html" class="waves-effect waves-teal">Animation</a> </li>
+  </ul>
+</header>
+<main>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container"> <br>
+      <br>
+      <h1 class="header black-text styleguide center">Errors</h1>
+    </div>
+  </div>
+  <div class="container"> 
+    <!--styles and states section-->
+    <div class="section">
+      <h2>Styles</h2>
+      <div class="row">
+        <div class="col s12 m6">
+          <h3>Types of errors</h3>
+          <p class="grey-text text-darken-1">Generally, errors within eCommerce can happen at three levels:
+          	<ol>
+            	<li>Page level</li>
+                <li>Container level</li>
+            	<li>Form field level</li>
+                
+            </ol>
+          </p>
+        </div>
+        <div class="col s12 m6">
+          <h3>Page-level examples</h3>
+          <a class="waves-effect waves-light btn tooltipped" data-position="bottom" data-delay="50" data-tooltip="Try it, it's not here" onClick="fourOhFourDemo()">404 err</a>
+          <a class="waves-effect waves-light btn tooltipped" data-position="bottom" data-delay="50" data-tooltip="Internet go bye-bye" onClick="connectionDemo();">Network err</a>
+          <p class="grey-text text-darken-1">Here are two examples of page-level errors that might occur. One is a 404 "Not found" error that brings the user to a real page instead of a frustrating 404 page. The other shows how control interactivity is suspended so that the user doesn't try to submit data when the network goes down.</p>
+          <p><b>Prefer non-blocking errors like toasts over modals whenever possible.</b></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m12">
+        <h3>Container-level examples</h3>
+        <div class="col s12 m12">
+        <a class="waves-effect waves-light btn tooltipped" data-position="bottom" data-delay="50" data-tooltip="Loaders gonna load" onClick="cardLoadFailDemo();">Fail to load</a>
+          <div class="card activity">
+            <div class="card-content">
+              <span class="card-title">Lorem ipsum bacon wow</span>
+              <br /><br /><!-- sorry about that -->
+              
+             <div class="progress" id="load_fail_demo">
+                <div class="indeterminate" style="width: 90%"></div>
+          	 </div>
+             <div class="row">
+                 <div class="col s12 center container-load-error">
+                    	<i class="material-icons medium center">report_problem</i>
+                        <p class="grey-text center" >Sorry, there was a problem with loading this.</p>
+                        <a class="waves-effect waves-light btn-flat right">Retry</a>
+                 </div>
+             </div>
+          	    
+            </div>
+            
+            
+          </div>
+           <div class="row">
+             <p class="grey-text text-darken-1">Sometimes, the content of an entire container may fail to load or render. When that happens, show the user that there was an issue in that spot, and give them an opportunity to reload only that resource so that information on other parts of the page remains unaffected. Container errors should follow the same rules as preloaders (take up no more than 6 (large) or 8 (small) centered columns, or the space of the container's content, whichever is smaller).</p>
+             <p class="grey-text text-darken-1">When possible, attempt to automatically reload the resource, and indicate to the user that their primary action (reloading) will automatically occur in X number of seconds.</p>
+             </div>
+           
+        </div>
+        </div>
+      </div>
+    </div>
+    <!--end styles and states section--> 
+    
+    <!--layout section-->
+    <div class="section no-divider">
+      <h2>Layout</h2>
+      <div class="row">
+        <div class="col s12 m12">
+          <h3>Header</h3>
+          <p class="grey-text text-darken-1">Content</p>
+        </div>
+        <div class="col s12 m12">
+          <div class="gray-block center no-padding"><img src=""/></div>
+        </div>
+      </div>
+    </div>
+    <!--end layout section--> 
+    
+  </div>
+  </div>
+  </div>
+  </div>
+  <br>
+  <br>
+  <div class="section"> </div>
+  </div>
+</main>
+<footer class="page-footer teal">
+  <div class="footer-copyright">
+    <div class="container"> Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a> </div>
+  </div>
+</footer>
+
+<!--  Scripts--> 
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> 
+<script src="js/materialize.js"></script> 
+<script src="js/init.js"></script>
+<script>
+
+
+
+toggleButtons = function(togval){
+	$(".btn").toggleClass("disabled", !togval);
+};
+
+connectionDemo = function(){
+	toggleButtons(false);
+	Materialize.toast('It looks like you\'re not connected to the Internet. Retrying...  X', 4000,'',
+						function(){toggleButtons(true);});
+}
+
+fourOhFourDemo = function(){
+	Materialize.toast('Sorry, that page doesn\'t exist. We\'ve brought you to the dashboard instead.  X', 4000);
+}
+
+cardLoadFailDemo = function(){
+	setTimeout(function(){$("#load_fail_demo").velocity({opacity: 0.0}, {duration: 1000, queue: false, ease: "easeInOutCubic"}) }, 1000);
+	setTimeout(function(){
+		$(".container-load-error").css({"display" : "block"});
+		$(".container-load-error").velocity({opacity: 1.0}, {duration: 1000, queue: false, ease: "easeInOutCubic"});
+	}, 1000);
+}
+
+$(document).ready(function(e){
+
+	//toggleToast(0.0, $("#toast_404"));
+	//toggleToast(0.0, $("#toast_disconnect"));
+
+});
+
+
+
+</script>
+</body>
+</html>

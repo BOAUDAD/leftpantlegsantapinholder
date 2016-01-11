@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+<title>Icons</title>
+<!-- CSS  -->
+<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<link href="css/fontello.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<style></style>
+</head>
+<body>
+<header>
+  <nav class="top-nav blue-grey darken-4">
+    <div class="container">
+      <div class="nav-wrapper"> <a href="index.html" class="page-title light">Style</a> </div>
+    </div>
+  </nav>
+  <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i aria-hidden="true" class="mdi-navigation-menu"></i></a></div>
+  <ul id="nav-mobile" class="side-nav fixed">
+    <li class="logo"><a id="logo-container" href="index.html" class="brand-logo"> <img id="logo-img" src="images/q2logo.png" height="50"></img> </a></li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Components</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="buttons.html">Buttons-Ecomm</a></li>
+              <li><a href="buttons-central.html">Buttons-Central</a></li>
+              <li><a href="fab.html">Buttons: Floating Action</a></li>
+              <li><a href="cards.html">Cards</a></li>
+              <li><a href="calendar.html">Date and time picker</a></li>
+              <li><a href="dialogs.html">Dialogs</a></li>
+              <li><a href="dividers.html">Dividers</a></li>
+              <li><a href="dropdowns.html">Dropdowns</a></li>
+              <li><a href="graphs.html">Graphs</a></li>
+              <li><a href="progress.html">Progress indicators</a></li>
+              <li><a href="side-menus.html">Side menus</a></li>
+              <li><a href="tabs.html">Tabs</a></li>
+              <li><a href="tables.html">Tables</a></li>
+              <li><a href="tags.html">Tags</a></li>
+              <li><a href="text-fields.html">Text Fields</a></li>
+              <li><a href="toggles.html">Toggles</a></li>
+              <li><a href="tool-tips.html">Tool tips</a> </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Styles</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="colors.html">Colors-Ecomm</a></li>
+              <li><a href="colors-central.html">Colors-Central</a></li>
+              <li><a href="icons.html">Icons</a></li>
+              <li><a href="typography.html">Typography</a> </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Patterns</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="errors.html">Errors</a></li>
+              <li><a href="empty-states.html">Empty states</a></li>
+              <li><a href="filters.html">Filters</a></li>
+              <li><a href="launch-screens.html">Launch screens</a></li>
+              <li><a href="navigation.html">Navigation</a></li>
+              <li><a href="search.html">Search</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="bold"><a href="layout.html" class="waves-effect waves-teal">Layout</a> </li>
+    <li class="bold"><a href="accessibility.html" class="waves-effect waves-teal">Accessibility</a> </li>
+    <li class="bold"><a href="animation.html" class="waves-effect waves-teal">Animation</a> </li>
+  </ul>
+</header>
+<main>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container"> <br>
+      <br>
+      <h1 class="header black-text styleguide center">Icons</h1>
+    </div>
+  </div>
+  <div class="container"> 
+    <!--styles and states section-->
+    <div class="section">
+      <h2>Icon accessibility</h2>
+      <p>By default, Fontello utilizes Private Use Area encoding, which in most cases prevents the mapped character from being spoken by screen readers and confusing users with sight impairments.  We also recommend using aria-hidden="true" on the i element to prevent cases where screen readers do read the characters in the PUA.  A span containing a hidden text label is also included within the i tag, which will be read by screen readers but invisible to sighted users.  The markup looks as follows:</p>
+      <p>
+        <xmp><i aria-hidden="true" class="icon-travel icon-xl"><span class="icon-text">Travel</span></i></xmp>
+      </p>
+    </div>
+    <div class="section">
+      <h2>General icons</h2>
+      <p>Most icons throughout the UI are 24px with a color of #9e9e9e, unless they are on components with colored backgrounds (such as buttons or cards), in which case the icons are white.  If on a white background, the warning icon uses the hex code #e64a19.  No additional classes need to be applied to standard icons.</p>
+      <br>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-add"><span class="icon-text">Add</span></i>
+          <h3>Add</h3>
+          <span>"add"</span>
+          <p>Indicates the ability to add an item.</p>
+          <div class="tag e-comm center">E-comm</div>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-chevron_left"><span class="icon-text">back</span></i>
+          <h3>Back</h3>
+          <span>"chevron_left"</span>
+          <p>Used in conjunction with a Back link.</p>
+          <div class="tag e-comm center">E-comm</div>
+          <div class="tag central center">Central</div>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-checkbox_checked"><span class="icon-text">checkbox is checked</span></i>
+          <h3>Checkbox - checked</h3>
+          <span>"checkbox_checked"</span>
+          <p>Selected checkbox.</p>
+          <div class="tag e-comm center">E-comm</div>
+          <div class="tag central center">Central</div>
+        </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-checkbox_unchecked"><span class="icon-text">checkbox is unchecked</span></i>
+          <h3>Checkbox - unchecked</h3>
+          <span>"checkbox_unchecked"</span>
+          <p>Unselected checkbox.</p>
+          <div class="tag e-comm center">E-comm</div>
+          <div class="tag central center">Central</div>
+        </div>
+        <div class="icon-preview col s12 m4"><em aria-hidden="true" class="icon-close"><span class="icon-text">Close</span></em>
+          <h3>Close</h3>
+          <span>"close"</span>
+          <p>Indicates the ability to remove (not delete) an item, or to close a window.</p>
+          <div class="tag e-comm center">E-comm</div>
+          <div class="tag central center">Central</div>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-date"></i>
+          <h3>Date range</h3>
+          <span>"date"</span>
+          <p>Represents a date range.</p>
+          <div class="tag e-comm center">E-comm</div>
+          <div class="tag central center">Central</div>
+        </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-desktop"><span class="icon-text">Desktop</span></i>
+          <h3>Desktop</h3>
+          <span>"desktop"</span>
+          <p>Represents the desktop device.</p>
+          <div class="tag e-comm center">E-comm</div>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-collapse"><span class="icon-text">Collapse</span></i>
+          <h3>Collapse</h3>
+          <span>"collapse"</span>
+          <p>Indicates that an expandable item is open and can be collapsed.</p>
+          <div class="tag e-comm center">E-comm</div>
+          <div class="tag central center">Central</div>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-copy"><span class="icon-text">Copy</span></i>
+          <h3>Copy</h3>
+          <span>"copy"</span>
+          <p>Indicates the ability to copy an item.</p>
+          <div class="tag e-comm center">E-comm</div>
+          <div class="tag central center">Central</div>
+        </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-delete"><span class="icon-text">Delete</span></i>
+          <h3>Delete</h3>
+          <span>"delete"</span>
+          <p>Indicates the ability to permanently delete an item.</p>
+          <div class="tag e-comm center">E-comm</div>
+          <div class="tag central center">Central</div>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-download"><span class="icon-text">Download</span></i>
+          <h3>Download</h3>
+          <span>"download"</span>
+          <p>Indicates the ability to download.</p>
+          <div class="tag e-comm center">E-comm</div>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-edit"><span class="icon-text">Edit</span></i>
+          <h3>Edit</h3>
+          <span>"edit"</span>
+          <p>Indicates the ability to edit.</p>
+          <div class="tag e-comm center">E-comm</div>
+          <div class="tag central center">Central</div>
+        </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-expand"><span class="icon-text">Expand</span></i>
+          <h3>Expand</h3>
+          <span>"expand"</span>
+          <p>Used to indicate that an expandable item is closed.</p>
+          <div class="tag e-comm center">E-comm</div>
+          <div class="tag central center">Central</div>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-filter"><span class="icon-text">Filter</span></i>
+          <h3>Filter</h3>
+          <span>"filter"</span>
+          <p>Indicates the ability to filter a listview.</p>
+          <div class="tag e-comm center">E-comm</div>
+          <div class="tag central center">Central</div>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-fullscreen"><span class="icon-text">Full screen</span></i>
+          <h3>Fullscreen</h3>
+          <span>"fullscreen"</span>
+          <p>Expands content to full screen.</p>
+          <div class="tag central center">Central</div>
+        </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-fullscreen_exit"><span class="icon-text">Exit full screen</span></i>
+          <h3>Fullscreen exit</h3>
+          <span>"fullscreen_exit"</span>
+          <p>Returns a full screen window to its previous size.</p>
+          <div class="tag central center">Central</div>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-import_export"><span class="icon-text">Import or export</span></i>
+          <h3>Import / export</h3>
+          <span>"import_export"</span>
+          <p>INSERT USE CASE HERE</p>
+          <div class="tag e-comm center">E-comm</div>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-list"><span class="icon-text">List</span></i>
+          <h3>List</h3>
+          <span>"list"</span>
+          <p>INSERT USE CASE HERE</p>
+          <div class="tag e-comm center">E-comm</div>
+        </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-lock"><span class="icon-text">Locked</span></i>
+          <h3>Locked</h3>
+          <span>"lock"</span>
+          <p>Indicates that an item is locked.</p>
+          <div class="tag e-comm center">E-comm</div>
+          <div class="tag central center">Central</div>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-phone"><span class="icon-text">Mobile phone</span></i>
+          <h3>Mobile phone</h3>
+          <span>"phone"</span>
+          <p>Represents a mobile phone device.</p>
+          <div class="tag e-comm center">E-comm</div>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-more"><span class="icon-text">More</span></i>
+          <h3>More</h3>
+          <span>"more"</span>
+          <p>Indicates that more options are available.</p>
+          <div class="tag central center">Central</div>
+        </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-multi-success"><span class="icon-text">Success</span></i>
+          <h3>Multi-success</h3>
+          <span>"multi-success"</span>
+          <p>Indicates that multiple actions completed successfully.</p>
+          <div class="tag e-comm center">E-comm</div>
+          <div class="tag central center">Central</div>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-chevron_right"><span class="icon-text">Next</span></i>
+          <h3>Next</h3>
+          <span>"chevron_right"</span>
+          <p>Used on Next buttons.</p>
+          <div class="tag e-comm center">E-comm</div>
+          <div class="tag central center">Central</div>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-open_in_new"><span class="icon-text">Open in browser</span></i>
+          <h3>Open in browser</h3>
+          <span>"open_in_new"</span>
+          <p>Indicates that an item can be opened in a browser window.</p>
+          <div class="tag e-comm center">E-comm</div>
+        </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-radio_checked"><span class="icon-text">Radio button is selected</span></i>
+          <h3>Radio - checked</h3>
+          <span>"radio_checked"</span>
+          <p>Selected radio button.  Also indicates a highlighted point on a report.</p>
+          <div class="tag e-comm center">E-comm</div>
+          <div class="tag central center">Central</div>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-radio_unchecked"><span class="icon-text">Radio button is not selected</span></i>
+          <h3>Radio - unchecked</h3>
+          <span>"radio_unchecked"</span>
+          <p>Unselected radio button.</p>
+          <div class="tag e-comm center">E-comm</div>
+          <div class="tag central center">Central</div>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-save"><span class="icon-text">Save</span></i>
+          <h3>Save</h3>
+          <span>"save"</span>
+          <p>Indicates the ability to save.</p>
+          <div class="tag central center">Central</div>
+        </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-search"><span class="icon-text">Search</span></i>
+          <h3>Search</h3>
+          <span>"search"</span>
+          <p>Used in the search field.</p>
+          <div class="tag e-comm center">E-comm</div>
+          <div class="tag central center">Central</div>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-success"><span class="icon-text">Success</span></i>
+          <h3>Success</h3>
+          <span>"success"</span>
+          <p>Indicates that an action has been successfully completed.</p>
+          <div class="tag e-comm center">E-comm</div>
+          <div class="tag central center">Central</div>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-tablet"><span class="icon-text">Tablet</span></i>
+          <h3>Tablet</h3>
+          <span>"tablet"</span>
+          <p>Indicates a tablet device.</p>
+          <div class="tag e-comm center">E-comm</div>
+        </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-upload"><span class="icon-text">Upload</span></i>
+          <h3>Upload</h3>
+          <span>"upload"</span>
+          <p>Indicates the ability to upload.</p>
+          <div class="tag e-comm center">E-comm</div>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-warning"><span class="icon-text">Warning</span></i>
+          <h3>Warning</h3>
+          <span>"warning"</span>
+          <p>Indicates a problem or potential problem.</p>
+          <div class="tag e-comm center">E-comm</div>
+          <div class="tag central center">Central</div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Navigation icons</h2>
+      <p>Navigation icons are white and presented on a colored background.  They use the class .icon-m, which increases their size to give them greater importance over the standard icons in the UI. </p>
+      <br>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-audiences icon-m"><span class="icon-text">Audiences</span></i>
+          <h3>Audiences</h3>
+          <span>"audiences"</span>
+          <p>Indicates the Audiences section in the left nav, and represents audience members in the Campaign Builder.</p>
+          <div class="tag e-comm center">E-comm</div>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-campaigns icon-m"><span class="icon-text">Campaigns</span></i>
+          <h3>Campaigns</h3>
+          <span>"campaigns"</span>
+          <p>Directs the user to the Campaigns section.</p>
+          <div class="tag e-comm center">E-comm</div>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-help icon-m"><span class="icon-text">Help</span></i>
+          <h3>Help</h3>
+          <span>"help"</span>
+          <p>Indicates that an item has an associated coachmark.</p>
+          <div class="tag e-comm center">E-comm</div>
+          <div class="tag central center">Central</div>
+        </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-home icon-m"><span class="icon-text">Home</span></i>
+          <h3>Home</h3>
+          <span>"home"</span>
+          <p>Represents home in the navigation.</p>
+          <div class="tag e-comm center">E-comm</div>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-settings icon-m"><span class="icon-text">Settings</span></i>
+          <h3>Settings</h3>
+          <span>"settings"</span>
+          <p>Represents the settings section of the application.</p>
+          <div class="tag e-comm center">E-comm</div>
+          <div class="tag central center">Central</div>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-utilization icon-m"><span class="icon-text">Utilization</span></i>
+          <h3>Utilization</h3>
+          <span>"utilization"</span>
+          <p>Used as the navigation icon for E-commerce's Utilization section.</p>
+          <div class="tag e-comm center">E-comm</div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Reporting icons</h2>
+      <p>The icons related to reporting are also 24px in size, but vary in color depending on whether they indicate positive or negative trends.  The flag icon is dark blue so it can be easily seen against the background color of the report.</p>
+      <br>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-flag"><span class="icon-text">Campaign edit occurred</span></i>
+          <h3>Flag</h3>
+          <span>"flag"</span>
+          <p>Indicates where an edit took place in a campaign report view.</p>
+          <div class="tag e-comm center">E-comm</div>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-report"><span class="icon-text">View report</span></i>
+          <h3>Report</h3>
+          <span>"report"</span>
+          <p>Used to view a report from the Campaign List of E-commerce.</p>
+          <div class="tag e-comm center">E-comm</div>
+        </div>
+        <div class="icon-preview col s12 m4">
+          <div class="text-danger"><i aria-hidden="true" class="icon-trending_down"><span class="icon-text">Trending down</span></i></div>
+          <h3>Trending down</h3>
+          <span>"trending_down"</span>
+          <p>Indicates that an item is trending down (in the Utilization section of E-comm).</p>
+          <div class="tag e-comm center">E-comm</div>
+        </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4">
+          <div class="text-success"><i aria-hidden="true" class="icon-trending_up"><span class="icon-text">Trending up</span></i></div>
+          <h3>Trending up</h3>
+          <span>"trending_up"</span>
+          <p>Indicates that an item is trending up (in the Utilization section of E-comm).</p>
+          <div class="tag e-comm center">E-comm</div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Campaign status icons
+        <div class="tag e-comm">E-comm</div>
+      </h2>
+      <p>This set of icons uses color to help differentiate campaign statuses.  They are also 24px.</p>
+      <br>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-active"><span class="icon-text">Active status</span></i>
+          <h3>Active</h3>
+          <span>"active"</span>
+          <p>Indicates that a campaign has an active status.</p>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-warning"><span class="icon-text">Approvals needed</span></i>
+          <h3>Approvals needed</h3>
+          <span>"warning"</span>
+          <p>Indicates that a campaign requires approval.</p>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-archived"><span class="icon-text">Archived status</span></i>
+          <h3>Archived</h3>
+          <span>"archived"</span>
+          <p>Indicates that a campaign has an archived status.</p>
+        </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-drafted"><span class="icon-text">Drafted status</span></i>
+          <h3>Drafted</h3>
+          <span>"drafted"</span>
+          <p>Indicates that a campaign has a drafted status.</p>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-paused"><span class="icon-text">Paused status</span></i>
+          <h3>Paused</h3>
+          <span>"paused"</span>
+          <p>Indicates that a campaign has a paused status.</p>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-queued"><span class="icon-text">Queued status</span></i>
+          <h3>Queued</h3>
+          <span>"queued"</span>
+          <p>Represents a campaign with a queued status.</p>
+        </div>
+        <div class="row icon-container">
+          <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-recommended"><span class="icon-text">Recommended status</span></i>
+            <h3>Recommended</h3>
+            <span>"recommended"</span>
+            <p>Indicates a recommended item.</p>
+          </div>
+          <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-third_party"><span class="icon-text">Third party status</span></i>
+            <h3>Third party</h3>
+            <span>"third_party"</span>
+            <p>Represents a third party campaign.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Recommended campaign icons
+        <div class="tag e-comm">E-comm</div>
+      </h2>
+      <p>Recommended campaign icons are typically white and presented on a colored card.  Icons on cards use the class .icon-l, which increases their size, as they are important visual components of the cards. </p>
+      <br>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-ach_payments icon-l"><span class="icon-text">ACH payments</span></i>
+          <h3>ACH payments</h3>
+          <span>"ach_payments"</span>
+          <p>Represents ACH payments (as behaviors or recommended campaigns).</p>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-auto icon-l"><span class="icon-text">Auto loan</span></i>
+          <h3>Auto loan</h3>
+          <span>"auto"</span>
+          <p>Represents a recommended auto loan campaign.</p>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-bill_pay icon-l"><span class="icon-text">Bill pay</span></i>
+          <h3>Bill pay</h3>
+          <span>"bill_pay"</span>
+          <p>Represents a recommended Bill Pay campaign.</p>
+        </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-checking icon-l"><span class="icon-text">Checking</span></i>
+          <h3>Checking</h3>
+          <span>"checking"</span>
+          <p>Represents a recommended checking campaign.</p>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-domestic_wires icon-l"><span class="icon-text">Domestic wires</span></i>
+          <h3>Domestic wires</h3>
+          <span>"domestic_wires"</span>
+          <p>Represents a recommended domestic wires campaign.</p>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-mortgage icon-l"><span class="icon-text">Home loan</span></i>
+          <h3>Home loan</h3>
+          <span>"mortgage"</span>
+          <p>Represents a recommended mortgage loan campaign.</p>
+        </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-international_wires icon-l"><span class="icon-text">International wires</span></i>
+          <h3>International wires</h3>
+          <span>"international_wires"</span>
+          <p>Represents a recommended international wires campaign</p>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-mrdc icon-l"><span class="icon-text">Mobile remote deposit capture</span></i>
+          <h3>MRDC</h3>
+          <span>"mrdc"</span>
+          <p>Represents a recommended MRDC campaign.</p>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-payroll icon-l"><span class="icon-text">Payroll</span></i>
+          <h3>Payroll</h3>
+          <span>"payroll"</span>
+          <p>Represents a recommended payroll campaign.</p>
+        </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-personal_loan icon-l"><span class="icon-text">Personal loan</span></i>
+          <h3>Personal loan</h3>
+          <span>"personal_loan"</span>
+          <p>Represents a recommended personal loan campaign.</p>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-student icon-l"><span class="icon-text">Student loan</span></i>
+          <h3>Student loan</h3>
+          <span>"student"</span>
+          <p>Represents a recommended student loan.</p>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-tax_payments icon-l"><span class="icon-text">Tax payments</span></i>
+          <h3>Tax payments</h3>
+          <span>"tax_payments"</span>
+          <p>Represents a recommended tax payments campaign.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Campaign activity icons
+        <div class="tag e-comm">E-comm</div>
+      </h2>
+      <p>Campaign activity icons are typically white and presented on a colored background.  Icons on cards use the class .icon-l, which increases their size, as they are important visual components of the cards. </p>
+      <p>The color of the box containing the icons corresponds to the type of edit.  Edits related to ads are orange, edits related to audiences are dark pink, launched campaigns are green, paused or stopped campaigns are deep orange, and all other edits to the campaign details are teal.</p>
+      <br>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4">
+          <div class="icon-box orange darken-3"><i aria-hidden="true" class="icon-ad icon-l"><span class="icon-text">Ads were edited</span></i></div>
+          <h3>Ad</h3>
+          <span>"ad"</span>
+          <p>Represents ads in the Campaign Builder and Activity Dashboard.</p>
+        </div>
+        <div class="icon-preview col s12 m4">
+          <div class="icon-box pink darken-4"><i aria-hidden="true" class="icon-audience_add icon-l"><span class="icon-text">Audience added</span></i></div>
+          <h3>Audience added</h3>
+          <span>"audience_add"</span>
+          <p>Indicates that an audience was added to a campaign.</p>
+        </div>
+        <div class="icon-preview col s12 m4">
+          <div class="icon-box pink darken-4"><i aria-hidden="true" class="icon-audience_remove icon-l"><span class="icon-text">Audience removed</span></i></div>
+          <h3>Audience removed</h3>
+          <span>"audience_remove"</span>
+          <p>Indicates that an audience was removed from a campaign.</p>
+        </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4">
+          <div class="icon-box deep-orange darken-2"><i aria-hidden="true" class="icon-stop icon-l"><span class="icon-text">Campaign ended</span></i></div>
+          <h3>Campaign ended</h3>
+          <span>"stop"</span>
+          <p>Indicates that a campaign ended.</p>
+        </div>
+        <div class="icon-preview col s12 m4">
+          <div class="icon-box teal"><i aria-hidden="true" class="icon-date icon-l"><span class="icon-text">Date range</span></i></div>
+          <h3>Date range</h3>
+          <span>"date"</span>
+          <p>Indicates that a campaign start or end date was edited.</p>
+        </div>
+        <div class="icon-preview col s12 m4">
+          <div class="icon-box teal"><i aria-hidden="true" class="icon-destination_page icon-l"><span class="icon-text">Destination page</span></i></div>
+          <h3>Destination page</h3>
+          <span>"destination_page"</span>
+          <p>Indicates that a campaign's destination page has been edited.</p>
+        </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4">
+          <div class="icon-box teal"><i aria-hidden="true" class="icon-filter icon-l"><span class="icon-text">Filter</span></i></div>
+          <h3>Filter</h3>
+          <span>"filter"</span>
+          <p>Indicates that a campaign's filters have been edited.</p>
+        </div>
+        <div class="icon-preview col s12 m4">
+          <div class="icon-box green"><i aria-hidden="true" class="icon-campaigns icon-l"><span class="icon-text">Launched</span></i></div>
+          <h3>Launched</h3>
+          <span>"campaigns"</span>
+          <p>Indicates that a campaign has launched.</p>
+        </div>
+        <div class="icon-preview col s12 m4">
+          <div class="icon-box teal"><i aria-hidden="true" class="icon-text_edit icon-l"><span class="icon-text">Name edited</span></i></div>
+          <h3>Name edited</h3>
+          <span>"text_edit"</span>
+          <p>Indicates that a campaign name has been changed.</p>
+        </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4">
+          <div class="icon-box teal"><i aria-hidden="true" class="icon-time icon-l"><span class="icon-text">Time range edited</span></i></div>
+          <h3>Time range</h3>
+          <span>"time"</span>
+          <p>Indicates that a campaign start or end time was edited.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Campaign benefit icons
+        <div class="tag e-comm">E-comm</div>
+      </h2>
+      <p>Campaign benefit use the class .icon-xl, which greatly increases their size, as they are among the most important visual representations on the screen.  They also use the hex code #880e4f for added visual interest.</p>
+      <br>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-engage icon-xl"><span class="icon-text">Engage</span></i>
+          <h3>Engage</h3>
+          <span>"engage"</span>
+          <p>Indicates the tendency of account holders to engage with online banking.</p>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-personal_loan icon-xl" style="color: #880E4F;"><span class="icon-text">Borrow</span></i>
+          <h3>Borrow</h3>
+          <span>"personal_loan"</span>
+          <p>Indicates the tendency to borrow (used in the benefits section of a recommended campaign).</p>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-purchase icon-xl"><span class="icon-text">Purchase</span></i>
+          <h3>Purchase</h3>
+          <span>"purchase"</span>
+          <p>Indicates the tendency to purchase more products (used in the benefits section of a recommended campaign).</p>
+        </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-stay icon-xl" style="color: #880E4F;"><span class="icon-text">Stay</span></i>
+          <h3>Stay</h3>
+          <span>"stay"</span>
+          <p>Indicates the tendency of account holders to stay with the institution.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Audience trait icons
+        <div class="tag e-comm">E-comm</div>
+      </h2>
+      <p>Audience traits use the class .icon-xl, which greatly increases their size, as they are among the most important visual representations on the screen. An animated fill with the hex code #880e4f indicates the audience's tendency to perform that behavior. </p>
+      <br>
+      <div class="row icon-container">
+        <h3>Deposit Account Products</h3>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-save_behavior icon-xl"><span class="icon-text">CD or Share Certificate</span></i>
+          <h4>CD or Share Certificate</h4>
+          <span>"save_behavior"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-charge_off icon-xl"><span class="icon-text">Charge Off</span></i>
+          <h4>Charge Off</h4>
+          <span>"charge_off"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-checking icon-xl"><span class="icon-text">Checking or Share Draft</span></i>
+          <h4>Checking or Share Draft</h4>
+          <span>"checking"</span> </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-checking icon-xl"><span class="icon-text">Commercial Checking or Share Draft</span></i>
+          <h4>Commercial Checking or Share Draft</h4>
+          <span>"checking"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-checking icon-xl"><span class="icon-text">Consumer Checking or Share Draft</span></i>
+          <h4>Consumer Checking or Share Draft</h4>
+          <span>"checking"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-direct_deposit icon-xl"><span class="icon-text">Deposit Account</span></i>
+          <h4>Deposit Account</h4>
+          <span>"direct_deposit"</span> </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-mortgage icon-xl"><span class="icon-text">Escrow</span></i>
+          <h4>Escrow</h4>
+          <span>"mortgage"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-money_market icon-xl"><span class="icon-text">Money Market</span></i>
+          <h4>Money Market</h4>
+          <span>"money_market"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-save_behavior icon-xl"><span class="icon-text">Savings or Share Deposit</span></i>
+          <h4>Savings or Share Deposit</h4>
+          <span>"save_behavior"</span> </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-save_behavior icon-xl"><span class="icon-text">Commercial Savings or Share Deposit</span></i>
+          <h4>Commercial Savings or Share Deposit</h4>
+          <span>"save_behavior"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-save_behavior icon-xl"><span class="icon-text">Consumer Savings or Share Deposit</span></i>
+          <h4>Consumer Savings or Share Deposit</h4>
+          <span>"save_behavior"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-trust icon-xl"><span class="icon-text">Trust</span></i>
+          <h4>Trust</h4>
+          <span>"trust"</span> </div>
+      </div>
+      <br>
+      <h3>Investment Products</h3>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-retirement icon-xl"><span class="icon-text">401k Plan</span></i>
+          <h4>401k Plan</h4>
+          <span>"retirement"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-retirement icon-xl"><span class="icon-text">403b Plan</span></i>
+          <h4>403b Plan</h4>
+          <span>"retirement"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-retirement icon-xl"><span class="icon-text">529 Plan</span></i>
+          <h4>529 Plan</h4>
+          <span>"retirement"</span> </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-retirement icon-xl"><span class="icon-text">Brokerage Investment</span></i>
+          <h4>Brokerage Investment</h4>
+          <span>"retirement"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-retirement icon-xl"><span class="icon-text">Investment</span></i>
+          <h4>Investment</h4>
+          <span>"retirement"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-retirement icon-xl"><span class="icon-text">Roth IRA</span></i>
+          <h4>Non-taxable Investment</h4>
+          <span>"retirement"</span>
+          <p>(External account)</p>
+        </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-retirement icon-xl"><span class="icon-text">Roth IRA</span></i>
+          <h4>Rollover IRA</h4>
+          <span>"retirement"</span>
+          <p>(External account)</p>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-retirement icon-xl"><span class="icon-text">Roth IRA</span></i>
+          <h4>Roth IRA</h4>
+          <span>"retirement"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-retirement icon-xl"><span class="icon-text">Taxable Investment</span></i>
+          <h4>Taxable Investment</h4>
+          <span>"retirement"</span>
+          <p>(External account)</p>
+        </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-retirement icon-xl"><span class="icon-text">Traditional IRA</span></i>
+          <h4>Traditional IRA</h4>
+          <span>"retirement"</span> </div>
+      </div>
+      <br>
+      <h3>Loan Products</h3>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-auto icon-xl"><span class="icon-text">Auto Loan</span></i>
+          <h4>Auto Loan</h4>
+          <span>"auto"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-credit_card icon-xl"><span class="icon-text">Credit Card</span></i>
+          <h4>Credit Card</h4>
+          <span>"credit_card"</span>
+          <p>(External product)</p>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-credit_card icon-xl"><span class="icon-text">Commercial Credit Card</span></i>
+          <h4>Commercial Credit Card</h4>
+          <span>"credit_card"</span> </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-credit_card icon-xl"><span class="icon-text">Consumer Credit Card</span></i>
+          <h4>Consumer Credit Card</h4>
+          <span>"credit_card"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-mortgage icon-xl"><span class="icon-text">Home Equity Line of Credit</span></i>
+          <h4>Home Equity Line of Credit</h4>
+          <span>"mortgage"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-mortgage icon-xl"><span class="icon-text">Home Equity Loan</span></i>
+          <h4>Home Equity Loan</h4>
+          <span>"mortgage"</span> </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-personal_loan icon-xl"><span class="icon-text">Line of Credit</span></i>
+          <h4>Line of Credit</h4>
+          <span>"personal_loan"</span>
+          <p>(External product)</p>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-personal_loan icon-xl"><span class="icon-text">Loan</span></i>
+          <h4>Loan</h4>
+          <span>"personal_loan"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-commercial icon-xl"><span class="icon-text">Commercial Line of Credit</span></i>
+          <h4>Commercial Line of Credit</h4>
+          <span>"commercial"</span> </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-personal_loan icon-xl"><span class="icon-text">Consumer Line of Credit</span></i>
+          <h4>Consumer Line of Credit</h4>
+          <span>"personal_loan"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-commercial icon-xl"><span class="icon-text">Commercial Loan</span></i>
+          <h4>Commercial Loan</h4>
+          <span>"commercial"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-personal_loan icon-xl"><span class="icon-text">Consumer Loan</span></i>
+          <h4>Consumer Loan</h4>
+          <span>"personal_loan"</span> </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-mortgage icon-xl"><span class="icon-text">Mortgage Loan</span></i>
+          <h4>Mortgage Loan</h4>
+          <span>"mortgage"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-personal_loan icon-xl"><span class="icon-text">Consumer Secured Loan</span></i>
+          <h4>Consumer Secured Loan</h4>
+          <span>"personal_loan"</span>
+          <p>(External product)</p>
+        </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-student icon-xl"><span class="icon-text">Student Loan</span></i>
+          <h4>Student Loan</h4>
+          <span>"student"</span>
+          <p>(External product)</p>
+        </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-commercial_real_estate icon-xl"><span class="icon-text">Commercial Real Estate</span></i>
+          <h4>Commercial Real Estate</h4>
+          <span>"commercial_real_estate"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-third_party icon-xl" style="color: #e0e0e0;"><span class="icon-text">Small Business Loan</span></i>
+          <h4>Small Business Loan</h4>
+          <span>"third_party"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-vehicle icon-xl"><span class="icon-text">Vehicle Loan</span></i>
+          <h4>Vehicle Loan</h4>
+          <span>"vehicle"</span> </div>
+      </div>
+      <br>
+      <h3>Other Products</h3>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-debit_card icon-xl"><span class="icon-text">Debit Card</span></i>
+          <h4>Debit Card</h4>
+          <span>"debit_card"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-insurance icon-xl"><span class="icon-text">Insurance</span></i>
+          <h4>Insurance</h4>
+          <span>"insurance"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-credit_card icon-xl"><span class="icon-text">Consumer Credit Card</span></i>
+          <h4>Consumer Credit Card</h4>
+          <span>"credit_card"</span> </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-non_traditional icon-xl"><span class="icon-text">Non-Traditional Products</span></i>
+          <h4>Non-Traditional Products</h4>
+          <span>"non_traditional"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-cash icon-xl"><span class="icon-text">Other Cash Mgmt Products</span></i>
+          <h4>Other Cash Mgmt Products</h4>
+          <span>"cash"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-non_traditional icon-xl"><span class="icon-text">Unknown</span></i>
+          <h4>Unknown</h4>
+          <span>"non_traditional"</span> </div>
+      </div>
+      <br>
+      <h3>Online Features</h3>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-ach_payments icon-xl"><span class="icon-text">ACH Batch</span></i>
+          <h4>ACH Batch</h4>
+          <span>"ach_payments"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-ach_payments icon-xl"><span class="icon-text">ACH Pass Thru</span></i>
+          <h4>ACH Pass Thru</h4>
+          <span>"ach_payments"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-payroll icon-xl"><span class="icon-text">ACH Payroll</span></i>
+          <h4>ACH Payroll</h4>
+          <span>"payroll"</span> </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-ach_payments icon-xl"><span class="icon-text">ACH Single Payment</span></i>
+          <h4>ACH Single Payment</h4>
+          <span>"ach_payments"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-bill_pay icon-xl"><span class="icon-text">Bill Pay</span></i>
+          <h4>Bill Pay</h4>
+          <span>"bill_pay"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-domestic_wires icon-xl"><span class="icon-text">Domestic Wires</span></i>
+          <h4>Domestic Wires</h4>
+          <span>"domestic_wires"</span> </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-estatements icon-xl"><span class="icon-text">E-statements</span></i>
+          <h4>E-statements</h4>
+          <span>"estatements"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-external_transfers icon-xl"><span class="icon-text">External Funds Transfers</span></i>
+          <h4>External Funds Transfers</h4>
+          <span>"external_transfers"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-transfers icon-xl"><span class="icon-text">Internal funds transfers</span></i>
+          <h4>Internal funds transfers</h4>
+          <span>"transfers"</span> </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-mrdc icon-xl"><span class="icon-text">Mobile remote deposits</span></i>
+          <h4>Mobile remote deposits</h4>
+          <span>"mrdc"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-pfm icon-xl"><span class="icon-text">Integrated PFM</span></i>
+          <h4>Integrated PFM</h4>
+          <span>"pfm"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-international_wires icon-xl"><span class="icon-text">International wires</span></i>
+          <h4>International wires</h4>
+          <span>"international_wires"</span> </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-p2p icon-xl"><span class="icon-text">Person to person payments</span></i>
+          <h4>Person to person payments</h4>
+          <span>"p2p"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-themes icon-xl"><span class="icon-text">Online banking themes</span></i>
+          <h4>Online banking themes</h4>
+          <span>"themes"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-credit_card icon-xl"><span class="icon-text">Transactions as credit</span></i>
+          <h4>Transactions as credit</h4>
+          <span>"credit_card"</span> </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-debit icon-xl"><span class="icon-text">Transactions as debit (PIN)</span></i>
+          <h4>Transactions as debit</h4>
+          <span>"debit"</span> </div>
+      </div>
+      <h3>Online Interactions</h3>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-balance_views icon-xl"><span class="icon-text">Account Balance Views</span></i>
+          <h4>Account Balance Views</h4>
+          <span>"balance_views"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-address_change icon-xl"><span class="icon-text">Address Change</span></i>
+          <h4>Address Change</h4>
+          <span>"address_change"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-link icon-xl"><span class="icon-text">Linked External Accounts</span></i>
+          <h4>Linked External Accounts</h4>
+          <span>"link"</span> </div>
+      </div>
+      <div class="row icon-container">
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-login icon-xl"><span class="icon-text">Logins</span></i>
+          <h4>Logins</h4>
+          <span>"login"</span> </div>
+        <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-categorized icon-xl"><span class="icon-text">Transactions categorized</span></i>
+          <h4>Transactions categorized</h4>
+          <span>"categorized"</span> </div>
+          
+          
+                  <div class="icon-preview col s12 m4"><i aria-hidden="true" class="icon-unlink icon-xl"><span class="icon-text">Unlinked external accounts</span></i>
+          <h4>Unlinked external accounts</h4>
+          <span>"unlink"</span> </div>
+      </div>
+    </div>
+    <!--end styles and states section-->
+    
+    <div class="section no-divider">
+      <h2>Acceptance Criteria</h2>
+      <div class="row">
+        <div class="col s12 m12">
+          <h3>User testing:</h3>
+          <ol>
+            <li>The meaning of the icons is easily understood by most test participants.</li>
+          </ol>
+          <h3>Accessibility testing:</h3>
+          <ol>
+            <li>Font characters are hidden from screen readers in all supported browsers.</li>
+            <li>Hidden text labels make the icon functions clear to users with sight impairments.</li>
+            <li>Icon color-to-background contrast ratio conforms to <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" alt="level AA">level AA</a>.</li>
+          </ol>
+          <h3>Tech testing:</h3>
+          <ol>
+            <li>Icons render properly in all supported browsers.</li>
+            <li>An area of space at least 44px wide is dedicated to the icon to allow for easier touch.</li>
+            <li>Colors and sizes match design guidelines provided here.</li>
+          </ol>
+        </div>
+        <div class="col s6 m6"> </div>
+      </div>
+    </div>
+    
+    <!--end acceptance criteria--> 
+  </div>
+  </div>
+  </div>
+  </div>
+  <br>
+  <br>
+  <div class="section"> </div>
+  </div>
+</main>
+<footer class="page-footer teal">
+  <div class="footer-copyright">
+    <div class="container"> Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a> </div>
+  </div>
+</footer>
+
+<!--  Scripts--> 
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> 
+<script src="js/materialize.js"></script> 
+<script src="js/init.js"></script>
+</body>
+</html>

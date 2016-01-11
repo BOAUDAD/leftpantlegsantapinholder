@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+<title>Graphs</title>
+<!-- CSS  -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<style></style>
+</head>
+<body>
+<header>
+  <nav class="top-nav blue-grey darken-4">
+    <div class="container">
+      <div class="nav-wrapper"> <a href="index.html" class="page-title light">Components</a> </div>
+    </div>
+  </nav>
+  <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="mdi-navigation-menu"></i></a></div>
+  <ul id="nav-mobile" class="side-nav fixed">
+    <li class="logo"><a id="logo-container" href="index.html" class="brand-logo"> <img id="logo-img" src="images/q2logo.png" height="50"></img> </a></li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Components</a>
+          <div class="collapsible-body">
+            <ul>
+<li><a href="buttons.html">Buttons-Ecomm</a></li>
+              <li><a href="buttons-central.html">Buttons-Central</a></li><li><a href="fab.html">Buttons: Floating Action</a></li>
+              <li><a href="cards.html">Cards</a></li><li><a href="calendar.html">Date and time picker</a></li>
+              <li><a href="dialogs.html">Dialogs</a></li>
+              <li><a href="dividers.html">Dividers</a></li>
+              <li><a href="dropdowns.html">Dropdowns</a></li>
+              <li><a href="graphs.html">Graphs</a></li>
+              <li><a href="progress.html">Progress indicators</a></li>
+              <li><a href="side-menus.html">Side menus</a></li>
+              <li><a href="tabs.html">Tabs</a></li>
+              <li><a href="tables.html">Tables</a></li>
+              <li><a href="tags.html">Tags</a></li>
+              <li><a href="text-fields.html">Text Fields</a></li>
+              <li><a href="toggles.html">Toggles</a></li>
+              <li><a href="tool-tips.html">Tool tips</a> </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Styles</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="colors.html">Colors-Ecomm</a></li>
+              <li><a href="colors-central.html">Colors-Central</a></li>
+              <li><a href="icons.html">Icons</a></li>
+              <li><a href="typography.html">Typography</a> </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Patterns</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="errors.html">Errors</a></li>
+              <li><a href="empty-states.html">Empty states</a></li>
+              <li><a href="filters.html">Filters</a></li>
+              <li><a href="launch-screens.html">Launch screens</a></li>
+              <li><a href="navigation.html">Navigation</a></li>
+              <li><a href="search.html">Search</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="bold"><a href="layout.html" class="waves-effect waves-teal">Layout</a> </li>
+    <li class="bold"><a href="accessibility.html" class="waves-effect waves-teal">Accessibility</a> </li>
+    <li class="bold"><a href="animation.html" class="waves-effect waves-teal">Animation</a> </li>
+  </ul>
+</header>
+<main>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container"> <br>
+      <br>
+      <h1 class="header black-text styleguide center">Graphs</h1>
+    </div>
+  </div>
+  <div class="container"> 
+    <!--graphs on cards-->
+    <div class="section">
+      <h2>Graphs on Cards</h2>
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card performance">
+            <div class="performance-title"><span class="card-title">Auto Loans Campaign</span>
+              <ul class="tabs">
+                <li class="tab"><a class="active" href="#test1">Clicks</a></li>
+                <li class="tab"><a href="#test2">Conversions</a></li>
+              </ul>
+            </div>
+            <div id="test1" class="col s12">
+              <div class="area-graph-wrapper">
+                <div class="area-chart-wrapper db-performance-area-chart" >
+                  <svg viewBox="0 0 340 150">
+                    <g transform="translate(30, 129)" class="axis xAxis">
+                      <g transform="translate(0,0)" class="tick">
+                        <line x2="0" y2="6"></line>
+                        <text x="0" y="9"  dy=".71em">6/21</text>
+                      </g>
+                      <g transform="translate(76.09387040280211,0)" class="tick">
+                        <line x2="0" y2="6"></line>
+                        <text x="0" y="9"  dy=".71em">6/23</text>
+                      </g>
+                      <g transform="translate(144.82381786339755,0)" class="tick">
+                        <line x2="0" y2="6"></line>
+                        <text x="0" y="9"  dy=".71em">6/25</text>
+                      </g>
+                      <g transform="translate(220.815411558669,0)" class="tick">
+                        <line x2="0" y2="6"></line>
+                        <text x="0" y="9"  dy=".71em">6/27</text>
+                      </g>
+                      <path d="M0,6V0H292V6" class="domain"></path>
+                    </g>
+                    <g transform="translate(30, 0)" class="axis">
+                      <g transform="translate(0,88)" class="tick">
+                        <line y2="0" x2="300"></line>
+                        <text y="0" x="-9" style="text-anchor: end;" dy=".32em">2%</text>
+                      </g>
+                      <g transform="translate(0,44)" class="tick">
+                        <line y2="0" x2="300"></line>
+                        <text y="0" x="-9" style="text-anchor: end;" dy=".32em">4%</text>
+                      </g>
+                      <g transform="translate(0,0)" class="tick">
+                        <line y2="0" x2="300"></line>
+                        <text y="0" x="-9" style="text-anchor: end;" dy=".32em">6%</text>
+                      </g>
+                      <path d="M-6,0H0V129H-6" class="domain"></path>
+                    </g>
+                    <path class="area" d="M30,86.36440677966101L47.18248686514886,17.49152542372881L64.36497373029772,47.008474576271176L81.5474605954466,99.48305084745762L98.72994746059545,91.83050847457628L115.91243432574431,72.15254237288136L133.0949211908932,57.94067796610168L150.27740805604202,9.838983050847446L167.4598949211909,28.42372881355932L184.64238178633977,95.11016949152543L201.72259194395798,40.44915254237287L218.90507880910684,31.703389830508478L236.0875656742557,36.07627118644067L253.27005253940456,60.12711864406779L270.4525394045534,73.24576271186442L287.6350262697023,76.52542372881355L304.81751313485114,0L322,45.915254237288124L322,129L304.81751313485114,129L287.6350262697023,129L270.4525394045534,129L253.27005253940456,129L236.0875656742557,129L218.90507880910684,129L201.72259194395798,129L184.64238178633977,129L167.4598949211909,129L150.27740805604202,129L133.0949211908932,129L115.91243432574431,129L98.72994746059545,129L81.5474605954466,129L64.36497373029772,129L47.18248686514886,129L30,129Z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div id="test2" class="col s12">
+              <div class="area-graph-wrapper">
+                <div class="area-chart-wrapper db-performance-area-chart" >
+                  <svg viewBox="0 0 340 150">
+                    <g transform="translate(30, 129)" class="axis xAxis">
+                      <g transform="translate(0,0)" class="tick">
+                        <line x2="0" y2="6"></line>
+                        <text x="0" y="9"  dy=".71em">6/21</text>
+                      </g>
+                      <g transform="translate(76.09387040280211,0)" class="tick">
+                        <line x2="0" y2="6"></line>
+                        <text x="0" y="9"  dy=".71em">6/23</text>
+                      </g>
+                      <g transform="translate(144.82381786339755,0)" class="tick">
+                        <line x2="0" y2="6"></line>
+                        <text x="0" y="9"  dy=".71em">6/25</text>
+                      </g>
+                      <g transform="translate(220.815411558669,0)" class="tick">
+                        <line x2="0" y2="6"></line>
+                        <text x="0" y="9"  dy=".71em">6/27</text>
+                      </g>
+                      <path d="M0,6V0H292V6" class="domain"></path>
+                    </g>
+                    <g transform="translate(30, 0)" class="axis">
+                      <g transform="translate(0,88)" class="tick">
+                        <line y2="0" x2="300"></line>
+                        <text y="0" x="-9" style="text-anchor: end;" dy=".32em">0.4%</text>
+                      </g>
+                      <g transform="translate(0,44)" class="tick">
+                        <line y2="0" x2="300"></line>
+                        <text y="0" x="-9" style="text-anchor: end;" dy=".32em">0.8%</text>
+                      </g>
+                      <g transform="translate(0,0)" class="tick">
+                        <line y2="0" x2="300"></line>
+                        <text y="0" x="-9" style="text-anchor: end;" dy=".32em">1.2%</text>
+                      </g>
+                      <path d="M-6,0H0V129H-6" class="domain"></path>
+                    </g>
+                    <path class="area" d="M30,70.36440677966101L47.18248686514886,20.49152542372881L64.36497373029772,53.008474576271176L81.5474605954466,69.48305084745762L98.72994746059545,67.83050847457628L115.91243432574431,69.15254237288136L133.0949211908932,55.94067796610168L150.27740805604202,12.838983050847446L167.4598949211909,20.42372881355932L184.64238178633977,55.11016949152543L201.72259194395798,50.44915254237287L218.90507880910684,31.703389830508478L236.0875656742557,36.07627118644067L253.27005253940456,60.12711864406779L270.4525394045534,64.24576271186442L287.6350262697023,67.52542372881355L304.81751313485114,0L322,46.915254237288124L322,129L304.81751313485114,129L287.6350262697023,129L270.4525394045534,129L253.27005253940456,129L236.0875656742557,129L218.90507880910684,129L201.72259194395798,129L184.64238178633977,129L167.4598949211909,129L150.27740805604202,129L133.0949211908932,129L115.91243432574431,129L98.72994746059545,129L81.5474605954466,129L64.36497373029772,129L47.18248686514886,129L30,129Z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="card-action"> <a href="#">Full report</a> </div>
+          </div>
+        </div>
+        <div class="col s12 m6">
+          <p>The graphs on this card are gray to indicate that they are not actionable, while the actionable items use the default action color.</p>
+          <p>Graphs are responsive so they can be easily viewed on all screen sizes.</p>
+          <p>Use the minimum number of vertical and horizontal lines needed to help the user understand the graphs without cluttering the UI.</p>
+          <p>The highest value listed on the y axis is determined by the largest y value reported on the active tab's graph, and will therefore change depending on the tab selected.  All subsequent y values are equal measures apart.  Values on the x axis begin with the start date of <strong>the</strong> campaign and end with the end date (or today's date, whichever is earlier), and are also divided into equal measures.  Values on the x axis stay the same, regardless of the selected tab.</p>
+        </div>
+      </div>
+    </div>
+    <!--end graphs on cards--> 
+    
+    <!--reports section-->
+    <div class="section">
+      <h2>Graphs on Report Screens</h2>
+      <div class="row">
+        <div class="col s12 m12">
+          <h3>Normal state</h3>
+          <p>Report graphs use the background color #009688 to indicate that they are actionable (hovering over a graph shows additional details).  Graphs are at 80% opacity so that the lines underneath are still visible for reference.</p>
+          <p>There are six horizontal lines along the y axis, and the maximum is determined by the largest y value on the graph.  All subsequent y values are equal measures apart.</p>
+          <p>There are nine vertical lines aling the x axis. Values on the x axis begin with the start date of <strong>the</strong> campaign and end with the current date, and are divided into equal measures.</p>
+          <p>Graphs are responsive so they can be easily viewed on all screen sizes. If the screen is reduced to a size in which lines on either axies are less than 44 pixels apart, the number of lines should decrease to prevent visual clutter.</p>
+          <p>Flags indicate points in time when the campaign was edited.</p>
+          <div class="gray-block center no-padding"><img src="images/report1.png"/></div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col s12 m12">
+          <h3>Hover / drag</h3>
+          <p>Hovering over a graph (or dragging on a touch device) on an area where there are no change points shows a flag with the date plus the value associated with the y axis.  This provides more detail that cannot be precisely interpreted from simply looking at the graph.</p>
+          <div class="gray-block center no-padding"><img src="images/report2.png"/></div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col s12 m12">
+          <h3>Hovering over a flag</h3>
+          <p>Hovering over a change points shows a flag with the date, the value associated with the y axis, and a description of the edit made to the campaign.  It is important for users to see what changes occurred on campaigns, particularly if permissions are shared across multiple users, and also to help explain any campaign metrics.</p>
+          <div class="gray-block center no-padding"><img src="images/report3.png"/></div>
+        </div>
+      </div>
+      
+      <br>
+      <div class="row">
+        <div class="col s12 m12">
+          <h3>Report layout</h3>
+          <p>Similar to <a href="https://www.google.com/design/spec/components/data-tables.html#data-tables-specs" title="material design tables">material design tables</a>, titles are left aligned on a white background.  Icons are placed in the upper right corner and aligned horizontally with titles.</p>
+          <p>Labels along the y axis are aligned with the top of the horizontal lines, while labels along the x axis are left-aligned to the vertical lines.</p>
+          <p>To reduce UI clutter, there is no label associated with the zero value along the y axis, and there is no label associated with the last value along the x axis (it can be easily inferred from the rest of the labels).</p>
+          <div class="gray-block center no-padding"><img src="images/report4.png"/></div>
+        </div>
+      </div>
+      <br>
+    
+    <!--end reports section--> 
+ 
+
+
+  </div>
+
+  <!--start acceptance criteria-->
+  <div class="section no-divider">
+    <h2>Acceptance Criteria</h2>
+    <div class="row">
+      <div class="col s12 m12">
+        <h3>User testing:</h3>
+        <ol>
+          <li>For graphs on cards, users understand how to tab between the graphs.</li>
+          <li>For graphs on cards, users know how to access full report views.</li>
+          <li>Users understand the numeric values associated with X and Y axes.</li>
+          <li>The descriptions of campaign edits that appear on hover make sense to users.</li>
+        </ol>
+        <h3>Accessibility testing:</h3>
+        <ol>
+          <li>Graphs have titles.</li>
+          <li>Graphs are delivered in HTML format as opposed to images or PDFs.</li>
+          <li>Each graph has an associated data table that can be downloaded (as an Excel doc or CSV, for example), which is more accessible by screen readers.</li>  <li>The data table contains the title, the X and Y values, and any descriptions of campaign edits associated with certain dates.</li>
+          <li>Users can tab through values on the graph to hear X and Y values as well as campaign edit descriptions (if this isn't possible, #3 and #4 are sufficient).</li>
+        </ol>
+        <h3>Tech testing:</h3>
+        <ol>
+          <li>Graphs respond appropriately to different screen sizes.</li>
+        
+          <li>Hover/drag states are implemented as shown, and work on desktops as well as touchscreen devices.</li>
+          <li>Flag indicators appear on dates when edits occurred.</li>
+          <li>Export links effectively download data tables in Excel or CSV format.</li>
+          <li>The highest and lowest y values on the graph are visible.</li>
+          <li>The campaign start and end date (or today's date, whichever is earlier) are visible.</li>
+          <li>X and Y values are shown at regular intervals.</li>
+     
+        </ol>
+      </div>
+      <div class="col s6 m6"> </div>
+    </div>
+  </div>
+  <!--end acceptance criteria-->
+  </div>
+</main>
+<footer class="page-footer teal">
+  <div class="footer-copyright">
+    <div class="container"> Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a> </div>
+  </div>
+</footer>
+
+<!--  Scripts--> 
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> 
+<script src="js/materialize.js"></script> 
+<script src="js/init.js"></script>
+</body>
+</html>
