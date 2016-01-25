@@ -8222,7 +8222,7 @@ button.btn-floating {
 .btn-flat {
   box-shadow: none;
   background-color: transparent;
-  color: #00a0b6;
+  color: #00a0b6 !important;
   cursor: pointer;
 }
 
