@@ -88,18 +88,18 @@
   <div class="section no-pad-bot" id="index-banner">
     <div class="container"> <br>
       <br>
-      <h1 class="header text styleguide">Data Table</h1>
+      <h1 class="header text styleguide center">Data Table</h1>
       <p> Data tables are use to present raw data sets. Common uses are search results and reporting. In its simplest form it is able to show a top row of column names and rows for data.</p>
     </div>
   </div>
   <div class="container"> 
     <!--styles and states section-->
 
-    <div class="section">
-      <h2 class="blue-text text-darken-2">Styles<h2/>
-      <h3>Borderless Table</h3>
-       <div class="row">
-        <div class="col s12">
+<div class="section">
+  <h2>Styles<h2/>
+  <h3>Borderless Table</h3>
+    <div class="row">
+    <div class="col s12">
          <p> Borderless Tables are the default table in the design library. In its simplest form it is able to show a top row of column names and rows for data. They provide a good base to add features to after usability testing. Text is always left aligned in the back office. Numeric values are right aligned in most but only numeric values with a decimal are right aligned in Central.<p/>
 
       <table>
@@ -140,21 +140,21 @@
           </tr>
         </tbody>
       </table>
-      </div>
+    </div>
     </div>
 
-<div class="section"> 
+
  <div class="row">
   <div class="col s12 m3">  
-   <p class="black-text">Column headers</p>
+   <h3>Column headers</h3>
     <p>14px (Bold) Open-sans, Roboto, Sans-serif</p>
   </div>
   <div class="col s12 m3">  
-   <p class="black-text">Table contents</p>
+   <h3>Table contents</h3>
     <p>14px Open-sans, Roboto, Sans-serif</p>
   </div>
   <div class="col s12 m3">  
-   <p class="black-text">Text alignment</p>
+   <h3>Text alignment</h3>
     <p>Left for text, Right for decimals</p>
   </di>
  </div> 
@@ -162,21 +162,20 @@
 
 
 
-<div class="section">
+  <div class="row">
       <h3>Bordered Table</h3>
-      <div class="row">
         <div class="col s12">
         <p> Bordered Tables are present in the back office patterns for eComm.<p/>
 
       <table class="bordered">
         <thead>
           <tr>
-              <th data-field="id">Login ID</th>
-              <th data-field="name">User Name</th>
-              <th data-field="price">Customer</th>
-              <th data-field="id">CIF</th>
-              <th data-field="name">Login Status</th>
-              <th data-field="price">Phone Number</th>
+              <th data-field="id">Campaign name</th>
+              <th data-field="name">Type</th>
+              <th data-field="price">Start</th>
+              <th data-field="id">End</th>
+              <th data-field="name">Edited</th>
+              <th data-field="price">CTR</th>
           </tr>
         </thead>
         <tbody>
@@ -211,11 +210,10 @@
 <div class="section"> 
  <div class="row">
   <div class="col s12 m3">  
-   <p class="black-text">Class</p>
+   <h3>Class</h3>
     <p>"bordered"</p>
   </div>
  </div> 
-
 
 <div class="section">
   <h2>Use Cases</h2>
@@ -231,18 +229,16 @@
     <p> The use of data table can change depending on the use case. </p>
   </div>
 </div>
-</div>
 
 
 </div>
 
-    <h2 class="blue-text text-darken-2">Interaction</h2>
+<div class="section">
+    <h2>Interaction</h2>
        <div class="row">
         <div class="col s12">
          <p> Row Hover (desktop), Row Selection, Sorted Column, Column and row hover from long header titles *link to tool tips (Desktop), <p/>
 
-
-    <div class="section">
       <h3>Highlighted Table</h3>
       <div class="row">
         <div class="col s12">
@@ -310,33 +306,47 @@
           </tr>
         </tbody>
       </table>
-      </div>
-    </div>
 
-<div class="section"> 
  <div class="row">
   <div class="col s12 m3">  
-   <p class="black-text">Row hover</p>
+   <h3>Row hover</h3>
     <p>#e2e2e2</p>
   </div>
   <div class="col s12 m3">  
-   <p class="black-text">Row selection</p>
+   <h3>Row selection</h3>
     <p>#f2f2f2</p>
   </div>
   <div class="col s12 m3">  
-   <p class="black-text">Class</p>
+   <h3>Class</h3>
     <p>"highlight"</p>
-  </di>
+  </div>
  </div> 
-</div>  
 
+
+   <div class="col s12">
+    <h3> Long header titles</h3>
+<p> The text will sometimes become greater that the column that it is contained in. When this happens it is recommended that the text become truncated. When hover over occurs the tool tip action will allow the use to see the information that is hidden by the ellipses placeholder.</p>
+
+<div class="row">
+  Follow guidelines for 
+  <a class="blue-text" 
+  href="tool-tips.html">Tool tips</a>
+
+   <div class="col s12">
+    <h3>Inline icons</h3>
+<p> There are tables that allow for inline actions with icons.</p>
+
+<div class="row">
+  Follow guidelines for 
+  <a class="blue-text" 
+  href="Icons.html">Icons</a>
+</div>
 
  <h2 class="blue-text text-darken-2">Specs</h2>
        <div class="row">
         <div class="col s12">
          <p> Header Height, data row height, header/ footer padding, column padding,  <p/>
-
-
+</div>
 
 
     <!--end styles and states section--> 

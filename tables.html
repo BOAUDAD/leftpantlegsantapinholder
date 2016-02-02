@@ -12,11 +12,13 @@
 </head>
 <body>
 <header>
+
+<!--navbar (made change to make fixe but on mobile menu icon disapears)-->
+  <div class="navbar-fixed">
   <nav class="top-nav blue-grey darken-4">
-    <div class="container">
-      <div class="nav-wrapper"> <a href="index.html" class="page-title light">Components</a> </div>
-    </div>
+    <div class="nav-wrapper"> <a href="index.html" class="page-title light">Components</a> </div>
   </nav>
+  </div>
   <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="mdi-navigation-menu"></i></a></div>
   <ul id="nav-mobile" class="side-nav fixed">
     <li class="logo"><a id="logo-container" href="index.html" class="brand-logo"> <img id="logo-img" src="images/q2logo.png" height="50"></img> </a></li>
@@ -82,19 +84,20 @@
     <li class="bold"><a href="animation.html" class="waves-effect waves-teal">Animation</a> </li>
   </ul>
 </header>
+
+<!--styles and states section-->
 <main>
-  <div class="section no-pad-bot" id="index-banner">
-    <div class="container"> <br>
-      <br>
-      <h1 class="header black-text styleguide center">Tables</h1>
-    </div>
-  </div>
   <div class="container"> 
-    <!--styles and states section-->
-    <div class="section">
+  <div class="section" id="index-banner">
+      <br></br>
+      <br></br>
+      <h1 class="header black-text styleguide center">Tables</h1>
+   <div class="row">
+      <p> Data tables are use to present raw data sets. Common uses are search results and reporting. In its simplest form it is able to show a top row of column names and rows for data.</p>
       <h2>Borderless Table</h2>
-      <div class="row">
+      <p> Borderless Tables are the default table in the design library. In its simplest form it is able to show a top row of column names and rows for data. They provide a good base to add features to after usability testing. Text is always left aligned in the back office. Numeric values are right aligned in most but only numeric values with a decimal are right aligned in Central.<p/>
       
+<!-- Table types-->
       <table>
         <thead>
           <tr>
@@ -122,15 +125,11 @@
           </tr>
         </tbody>
       </table>
-      
-      </div>
-    </div>
-    <!--end styles and states section--> 
-    
-    <!--layout section-->
-    <div class="section no-divider">
-      <h2>Bordered Table</h2>
-      <div class="row">
+   </div>
+ 
+   <div class="row">
+     <h2>Bordered Table</h2>
+      <p>Add class="bordered" to the table tag to create a bordered table<p/>
       
       <table class="bordered">
         <thead>
@@ -159,53 +158,60 @@
           </tr>
         </tbody>
       </table>
-      
-        
-      </div>
     </div>
-    <!--end layout section--> 
-    
-        <!--layout section-->
-    <div class="section no-divider">
-      <h2>Striped Table</h2>
-      <div class="row">
-      
-      <table class="striped">
-        <thead>
-          <tr>
-              <th data-field="id">Name</th>
-              <th data-field="name">Item Name</th>
-              <th data-field="price">Item Price</th>
-          </tr>
-        </thead>
 
-        <tbody>
-          <tr>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
-          </tr>
-          <tr>
-            <td>Alan</td>
-            <td>Jellybean</td>
-            <td>$3.76</td>
-          </tr>
-          <tr>
-            <td>Jonathan</td>
-            <td>Lollipop</td>
-            <td>$7.00</td>
-          </tr>
-        </tbody>
-      </table>
-      
-        
-      </div>
-    </div>
-    <!--end layout section-->
-    
-        <!--layout section-->
+<!--End of Table types-->
+
+<!--Specs-->
+
+<div class="section no-divider gray">
+  <h2>Specs</h2>
+
+<div class="row">
+  <div class="col s12 m2">  
+   <h3>Column headers</h3>
+    <p>14px (Bold) Open-sans, Roboto, Sans-serif</p>
+  </div>
+
+  <div class="col s12 m2">  
+   <h3>Table contents</h3>
+    <p>14px Open-sans, Roboto, Sans-serif</p>
+  </div>
+
+  <div class="col s12 m2">  
+   <h3>Text alignment</h3>
+    <p>Left for text, Right for decimals</p>
+ </div> 
+
+  <div class="col s12 m2">  
+   <h3>Row hover</h3>
+    <p>#e2e2e2</p>
+  </div>
+
+  <div class="col s12 m2">  
+   <h3>Row selection</h3>
+    <p>#f2f2f2</p>
+  </div>
+  </div>
+
+
+    <!--end Specs section-->
+
+
+<!--Removed striped table b/c not used in BO-->
+
+
+ <!-- Table Interactions section-->
+<div class="section">
+
+    <h1 class="header black-text styleguide center">Interactions</h1>
+  <div class="row">
+    <p class="center">Actions are used in the Back Office to help with usability.<p/>
+
+
     <div class="section no-divider">
       <h2>Highlight Table</h2>
+      <p>Add class="highlight" to the table tag to create a highlighted table<p/>
       <div class="row">
       
       <table class="highlight">
@@ -239,52 +245,20 @@
         
       </div>
     </div>
-    <!--end layout section-->
-    
-    <!--layout section-->
-    <div class="section no-divider">
-      <h2>Highlight Striped Table</h2>
-      <div class="row">
-      
-      <table class="highlight striped">
-        <thead>
-          <tr>
-              <th data-field="id">Name</th>
-              <th data-field="name">Item Name</th>
-              <th data-field="price">Item Price</th>
-          </tr>
-        </thead>
 
-        <tbody>
-          <tr>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
-          </tr>
-          <tr>
-            <td>Alan</td>
-            <td>Jellybean</td>
-            <td>$3.76</td>
-          </tr>
-          <tr>
-            <td>Jonathan</td>
-            <td>Lollipop</td>
-            <td>$7.00</td>
-          </tr>
-        </tbody>
-      </table>
-      
-        
-      </div>
-    </div>
-    <!--end layout section-->
+
+<!--Removed Highlight striped table b/c not used in BO-->
+
     
-     <!--layout section-->
+     <!--Expandable row-->
+
+
+
     <div class="section no-divider">
       <h2>Expandable Row</h2>
       <div class="row">
       
-      <ul class="collapsible" data-collapsible="expandable"">
+      <ul class="collapsible" data-collapsible="expandable">
     <li>
       <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
       <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
@@ -301,16 +275,107 @@
         
       </div>
     </div>
-    <!--end layout section-->
-    
-  </div>
-  </div>
-  </div>
-  </div>
-  <br>
-  <br>
-  <div class="section"> </div>
-  </div>
+    <!--end expandable row-->
+
+
+
+
+    <!--long heade titles-->
+
+    <div class="section no-divider">
+    <h2> Long Header Titles</h2>
+<p> The text will sometimes become greater that the column that it is contained in. When this happens it is recommended that the text become truncated. When hover over occurs the tool tip action will allow the use to see the information that is hidden by the ellipses placeholder.</p>
+
+<br></br>
+
+ <div class="center">
+    <div class="gray-black center no-padding">
+      <img src="images/HoverOverEllipsis.png"></img>
+
+<br></br>
+  <p>To help users with reading larger text titles, each elipses should have a tooltip on hover or long press.</p>
+</div>
+
+  <a class="blue-text  left"href="tool-tips.html">Read more about Tool Tips here.</a>
+</div>
+<!--end long header titles-->
+
+<!--Inline Icons-->
+
+
+<div class="section no-divider">
+  <br></br>
+  <h2>Inline icons</h2>
+  <p> There are tables that allow for inline actions with icons.</p>
+<br> 
+  <a class="blue-text" 
+  href="Icons.html">Read more about Icons here.</a>
+</div>
+
+<!-- End of Inline Icons-->
+
+
+    <!--Sticky Headers-->
+
+    <div class="section no-divider">
+    <h2> Sticky Headers</h2>
+<p> The text will sometimes become greater that the column that it is contained in. When this happens it is recommended that the text become truncated. When hover over occurs the tool tip action will allow the use to see the information that is hidden by the ellipses placeholder.</p>
+
+<br></br>
+
+ <div class="center">
+    <div class="gray-black center no-padding">
+      <img src="images/HoverOverEllipsis.png"></img>
+
+<br></br>
+  <p>To help users with reading larger text titles, each elipses should have a tooltip on hover or long press.</p>
+</div>
+
+  <a class="blue-text  left"href="tool-tips.html">Read more about Tool Tips here.</a>
+</div>
+<!--end Sticky Headers-->
+
+
+    <!--Sort-->
+
+    <div class="section no-divider">
+    <h2> Column Sort</h2>
+<p> The text will sometimes become greater that the column that it is contained in. When this happens it is recommended that the text become truncated. When hover over occurs the tool tip action will allow the use to see the information that is hidden by the ellipses placeholder.</p>
+
+<br></br>
+
+ <div class="center">
+    <div class="gray-black center no-padding">
+      <img src="images/HoverOverEllipsis.png"></img>
+
+<br></br>
+  <p>To help users with reading larger text titles, each elipses should have a tooltip on hover or long press.</p>
+</div>
+
+  <a class="blue-text  left"href="tool-tips.html">Read more about Tool Tips here.</a>
+</div>
+<!--end Sort-->
+
+    <!--Empty States-->
+
+    <div class="section no-divider">
+    <h2> Empty States</h2>
+<p> The text will sometimes become greater that the column that it is contained in. When this happens it is recommended that the text become truncated. When hover over occurs the tool tip action will allow the use to see the information that is hidden by the ellipses placeholder.</p>
+
+<br></br>
+
+ <div class="center">
+    <div class="gray-black center no-padding">
+      <img src="images/HoverOverEllipsis.png"></img>
+
+<br></br>
+  <p>To help users with reading larger text titles, each elipses should have a tooltip on hover or long press.</p>
+</div>
+
+  <a class="blue-text  left"href="tool-tips.html">Read more about Tool Tips here.</a>
+</div>
+<!--end Empty States-->
+
 </main>
 <footer class="page-footer teal">
   <div class="footer-copyright">
